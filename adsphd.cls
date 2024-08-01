@@ -24,7 +24,7 @@
 \RequirePackage{iftex}
 
 %\RequirePackage[usenames]{color}
-\RequirePackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\RequirePackage[dvipsnames,svgnames,table]{xcolor}
 
 % Fix papersize
 \newlength{\adsphdpaperheight}
@@ -209,7 +209,7 @@
   \ifpdf
     \PassOptionsToPackage{plainpages=false,pdfpagelabels,bookmarks,breaklinks,pdfborder={0 0 0}}{hyperref}
   \else
-    \PassOptionsToPackage{plainpages=false,pdfpagelabels,ps2pdf,bookmarks,breaklinks,pdfborder={0 0 0}}{hyperref}
+    \PassOptionsToPackage{plainpages=false,pdfpagelabels,dvips,bookmarks,breaklinks,pdfborder={0 0 0}}{hyperref}
   \fi
 \fi
 
@@ -578,7 +578,7 @@
   \typeout{Using pdf}
   % Load the crop package
   \ifadsphd@epub\else
-  \RequirePackage[center,pdftex]{crop}
+  \RequirePackage[center,lualatex]{crop}
   \fi
   \RequirePackage{graphicx}
   \DeclareGraphicsExtensions{.pdf, .jpg, .tif, .png}
@@ -619,8 +619,6 @@
 %\RequirePackage{pifont}   % Dingbats
 
 \newcommand{\labfont}{\fontfamily{phv}\selectfont} % fonts used in labels
-\usepackage{sectsty}
-\allsectionsfont{\sffamily}
 \DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
 
 % TABLE OF CONTENTS
@@ -1459,10 +1457,10 @@ De appendices kunnen desgevallend worden gebundeld in een apart boekdeel.
   \textblockcolour{}
   \vspace{-\parskip}
   \begin{minipage}[t]{67mm}
-  {\coverfontsize{12}{15}\selectfont\sffamily%
+  {\coverfontsize{11}{15}\selectfont\sffamily%
   \begin{flushright}
   Dissertation presented in partial\\%
-  \fulfillment\ of the requirements for the\\%
+  fulfillment of the requirements for the\\%
   degree of \@phddegree
   \end{flushright}
   }
@@ -1475,7 +1473,7 @@ De appendices kunnen desgevallend worden gebundeld in een apart boekdeel.
   \vspace{-\parskip}
   \begin{minipage}[t]{67mm}
   \begin{flushright}
-  {\coverfontsize{12}{15}\selectfont\sffamily\@date}
+  {\coverfontsize{11}{15}\selectfont\sffamily\@date}
   \end{flushright}
   \end{minipage}
   \end{textblock*}
@@ -1523,7 +1521,7 @@ De appendices kunnen desgevallend worden gebundeld in een apart boekdeel.
     \textblockcolour{}
     \vspace{-\parskip}
     \begin{minipage}[t]{67mm}
-      \coverfontsize{12}{15}\selectfont\sffamily
+      \coverfontsize{11}{15}\selectfont\sffamily
       %\begin{tabular}[t]{p{6.9cm}}
       \dtlifnumlt{\DTLrowcount{supervisor}}{2}{Supervisor:}{Supervisors:}
       \DTLforeach{supervisor}{\name=name,\affiliation=affiliation}{%
@@ -1620,7 +1618,7 @@ De appendices kunnen desgevallend worden gebundeld in een apart boekdeel.
   \textblockcolour{}
   \vspace{-\parskip}
   {\small\sffamily Dissertation presented in partial\\
-  \fulfillment\ of the requirements for\\
+  fulfillment of the requirements for\\
   the degree of \@phddegree}
   \end{textblock*}
   %

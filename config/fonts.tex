@@ -1,0 +1,32 @@
+\usepackage{fontspec}
+
+\setmainfont{GARAMONDPREMRPRO}[%
+    Path            = ./fonts/garamond/,
+    Extension       = .otf,
+    UprightFont     = *,
+    BoldFont        = *-BD,
+    ItalicFont      = *-IT,
+    BoldItalicFont  = *-BDIT]
+
+\newfontfamily\GaramondCaption{GARAMONDPREMRPRO}[%
+    Path            = ./fonts/garamond/,
+    Extension       = .otf,
+    UprightFont     = *-CAPT,
+    BoldFont        = *-BDCAPT,
+    ItalicFont      = *-ITCAPT,
+    BoldItalicFont  = *-BDITCAPT]
+
+\newfontfamily\Helvetica{HelveticaNeue}[%
+    Path            = ./fonts/helvetica/,
+    Extension       = .otf,
+    UprightFont     = *Roman,
+    BoldFont        = *Bold,
+    ItalicFont      = *Italic,
+    BoldItalicFont  = *BoldItalic]
+
+\renewcommand{\sffamily}{\Helvetica}
+
+
+
+
+\usepackage[math-style=ISO, bold-style=ISO]{unicode-math}

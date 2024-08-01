@@ -1,14 +1,7 @@
-\documentclass[showinstructions,faculty=firw,department=elt,phddegree=elt]{adsphd}
-%\documentclass[showinstructions,faculty=firw,department=cws,phddegree=cws,doctoralschool=ads]{adsphd}
-%\documentclass[showinstructions,showlabels,coverfontpercent=100,faculty=firw,department=cws,phddegree=cws]{adsphd}
-%\documentclass[croppedpdf,showinstructions,faculty=firw,department=cws,phddegree=cws]{adsphd}
-%\documentclass[online,faculty=firw,department=cws,phddegree=cws]{adsphd}
-%\documentclass[print,bleed,cropmarks,faculty=firw,department=cws,phddegree=cws]{adsphd} % include bleed for the print service
-%\documentclass[print,faculty=firw,department=cws,phddegree=cws]{adsphd}
-%\documentclass[final,faculty=firw,department=cws,phddegree=cws]{adsphd}
-%\documentclass[showinstructions,faculty=firw,department=cws,phddegree=cws,epub]{adsphd}
+\documentclass[faculty=firw,department=elt,phddegree=elt,doctoralschool=ads]{adsphd}
+\input{config/preamble.tex}
 
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!                                                               !!
 % !!  WARNING: do not remove the following lines between           !!
 % !!  "%%% COVER: Settings %%%" and "%%% COVER: End settings %%%"  !!
@@ -16,16 +9,16 @@
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 %%% COVER: Settings %%%
-\title{Optimal Transport and Kernel Methods}
+\title{Kernels, Duality and Optimal Transport}
 %\subtitle{Multiscale computing for Dummies}
 
 \author{Henri}{De Plaen}
 
-\supervisor{Prof.~dr.~ir.~J.~A.~K.~Suykens}{}
+\supervisor{Prof.~dr.~ir.~Johan~A.~K.~Suykens}{}
 \president{Prof.~dr.~ir.~The~Chairman}{}
-\jurymember{Prof.~dr.~ir.~P.~Patrinos}{}
-\jurymember{Prof.~dr.~ir.~K.~Meerbergen}{}
-\jurymember{Prof.~dr.~T.~Tuytelaars}{}
+\jurymember{Prof.~dr.~ir.~Panagiotis~Patrinos}{}
+\jurymember{Prof.~dr.~ir.~Karl~Meerbergen}{}
+\jurymember{Prof.~dr.~Tinne~Tuytelaars}{}
 \externaljurymember{Prof.~dr.~M.~Cuturi}{Apple, ENSAE Paris}
 
 % Your research group within the department
@@ -41,10 +34,8 @@
 
 \date{July 2024}
 \copyyear{2024}
-%\udc{XXX.XX}            % UDC, deposit number and ISBN are no longer necessary.
 %\depot{XXXX/XXXX/XX}    % Leave out the initial D/ (it is added
                          % automatically)
-%\isbn{XXX-XX-XXXX-XXX-X}
 
 
 % Set spine width:
@@ -82,18 +73,6 @@
 }
 \makeglossaries%
 
-
-% BibLaTeX
-%\usepackage[utf8]{inputenc}
-%\usepackage{csquotes}
-%\usepackage[
-  %hyperref=auto,
-  %mincrossrefs=999,
-  %backend=biber,
-  %style=authoryear-icomp
-%]{biblatex}
-%\addbibresource{allpapers.bib}
-
 % Fonts
 \usepackage{textcomp} % nice greek alphabet
 \usepackage{pifont}   % Dingbats
@@ -123,6 +102,7 @@
 %    \includeabbreviations{abbreviations}
 % 2. automatic generation via the glossary package
 %    \glossary{name=MD,description=molecular dynamics}
+\input{config/abbreviations.tex}
 \myprintglossary
 
 % To create a list of symbols, there are 2 options
@@ -162,13 +142,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
 
-\includebibliography
-% BibTex
-\bibliographystyle{acm}
-\bibliography{allpapers}
 % BibLatex (comment lines above and comment out biblatex lines in preamble)
-%\printbibliography[title=\bibname]
-\instructionsbibliography
+\printbibliography[title=\bibname]
 
 \includecv{curriculum}
 

@@ -1,0 +1,25 @@
+% CHAPTER STYLES
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+{\huge\GaramondCaption\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge\centering}
+
+\titleformat{\section}
+{\GaramondCaption\Large\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\GaramondCaption\large\bfseries}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\GaramondCaption\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+
+% QUOTE
+\makeatletter
+\newenvironment{chapquote}[2][.5\textwidth]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-\@tempdima-2em\relax%
+   \itshape}
+  {\par\normalfont\hfill---\ \chapquote@author\hspace*{2em}\par\bigskip}
+\makeatother
