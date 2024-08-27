@@ -623,8 +623,8 @@
 
 % TABLE OF CONTENTS
 \usepackage[titles]{tocloft}
-\renewcommand{\cftchapfont}{\sffamily\bfseries\selectfont}
-\renewcommand{\cftchappagefont}{\sffamily\bfseries\selectfont}
+\renewcommand{\cftchapfont}{\GaramondCaption\bfseries\selectfont}
+\renewcommand{\cftchappagefont}{\GaramondCaption\bfseries\selectfont}
 
 % PAGE LAYOUT
 %\setlength{\textwidth}{12.5truecm}
@@ -659,11 +659,11 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 % Make sure headers are uppercase
-\renewcommand{\chaptermark}[1]{\markboth{\uppercase{#1}}{\uppercase{#1}}}
-\renewcommand{\sectionmark}[1]{\markright{\uppercase{#1}}}
+\renewcommand{\chaptermark}[1]{\markboth{\textsc{#1}}{\textsc{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\textsc{#1}}}
 \fancyhf{}
-\fancyhead[RO]{\scriptsize\sffamily\rightmark\ \hrulefill\ \thepage}
-\fancyhead[RE]{\scriptsize\sffamily\thepage\ \hrulefill\ \leftmark}
+\fancyhead[RO]{\small\GaramondCaption\rightmark\ \hrulefill\ \thepage}
+\fancyhead[RE]{\small\GaramondCaption\thepage\ \hrulefill\ \leftmark}
 \renewcommand{\headrulewidth}{0pt}
 \fancypagestyle{plain}{
 \fancyhf{}
@@ -718,7 +718,7 @@
 \def\dashint{\Xint-}
 
 % VEC
-%\def\vec#1{{\bf\bm{#1}}}
+%\def\vec#1{{\bf\mathbfit{#1}}}
 
 % DTILDE
 \def\dtilde#1{\mathrlap{\rlap{\raise1.2pt\hbox{$\mathsurround=0pt%
@@ -796,8 +796,7 @@
 \def\@nonumberchapter[#1]#2{%
   \addcontentsline{toc}{chapter}{#1}%
   \chaptermark{#1}%
-  \addtocontents{lof}{\protect\addvspace{10\p@}}%
-  \addtocontents{lot}{\protect\addvspace{10\p@}}%
+
   \if@twocolumn
     \@topnewpage[\vspace*{-\@chaptitlemoveup}%
         \@makeschapterhead{#2}]%

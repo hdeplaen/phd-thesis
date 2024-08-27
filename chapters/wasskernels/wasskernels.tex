@@ -1,0 +1,340 @@
+\chapter{Wasserstein Exponential Kernels}\label{cha:wasskernels}
+
+In the context of kernel methods, the similarity between data points is encoded by the kernel function which is often defined thanks to the Euclidean distance; the squared exponential kernel is a common example. Recently, other distances relying on optimal transport theory -- such as the Wasserstein distance between probability distributions -- have shown their practical relevance for different machine learning techniques. In this paper, we study the use of exponential kernels defined thanks to the regularized Wasserstein distance and discuss their positive definiteness. More specifically, we define Wasserstein feature maps and illustrate their interest for supervised learning problems involving shapes and images. Empirically, Wasserstein squared exponential kernels are shown to yield smaller classification errors on small training sets of shapes, compared to analogous classifiers using Euclidean distances.
+
+\section{Introduction}
+Contemporary machine learning methods frequently rely on neural networks and shape recognition relies more specifically on convolutional neural networks. The big advantage of the latter is its ability to take into account the underlying structure of the data by treating neighboring pixels together. If these methods are often impressive by their performance, they are also known for their drawbacks such as a weak robustness and a difficult explainability. On the other side, although not always as accurate as neural networks, kernel methods are praised for their easy explainability and robustness. Another advantage of kernel methods is their versatility as they can easily be used in supervised and unsupervised methods, as well as for generation~\cite{GenRKM}. In this paper, we emphasize the interest of choosing a particular kernel based on Wasserstein distance for classifying small datasets consisting of shapes.
+
+In the context of kernel methods, squared exponential kernel functions are widely used, mainly because of their universal approximation properties and their empirical success. These Gaussians consist of the exponential of the negative Euclidean distance squared. However, the Euclidean distance might not always be appropriate to compare data points when datKHSas some particular structure. Indeed, it measures the correspondence of each feature independently of the other features. For example, let's consider the case of two identical 2D-shapes. When the two shapes overlap, their Euclidean distance is zero. However, if they do not overlap, their relative Euclidean distance becomes large although the shapes are identical. In other words, the Euclidean distance only compares each pixel at the same place on the grid and does not take the neighbouring pixels into account. The general structure of the features is not taken into account, only their strict correspondence.
+Another distance -- the Wasserstein distance -- gained popularity in recent years since it can incorporate the structure of the data if the dataset can be processed in such a manner that the datapoints can be considered as probability distributions.
+\subsection*{Contributions}
+The contributions of this paper are the following. Empirically, we demonstrate that squared exponential kernels~\eqref{eq:kW} based on a regularized Wassertein distance  are performant on small scale classification problems involving shape datasets, compared for instance to the popular Gaussian RBF kernel~\cite{rasmussen:williams:2006}. Also, an approximation technique is proposed, with the so-called Wasserstein feature map, so that a positive semi-definite (psd) kernel can be defined from the Wasserstein squared exponential kernel which is not necessarily psd.
+\subsection*{Notations and conventions}
+In the sequel, we denote vectors by bold lower case letters. Let $\mathbfit{1}$ be the all ones column vector. Also, we define $\delta_y$  to be the Dirac measure at point $y$. A kernel $k:\mathbb{R}^d\times \mathbb{R}^d \to \mathbb{R}$ is called positive semi-definite if all kernel matrices  $K = [k(\mathbfit{x_i},\mathbfit{x_j})]_{i,j =1}^n$ are positive semi-definite.
+
+\subsection*{Wasserstein distances}
+The Wasserstein distance is a central notion in optimal transport theory. Also known as the \emph{earth mover's distance}, it corresponds to the optimal transportation cost between two measures~\cite{villani2008optimal,GabrielPeyre2019COTW}. Let $p>0$. We then define two normalized empirical measures $\mathbfit{\alpha} = \sum_{i=1}^m a_i \delta_{\mathbfit{y_i}}$ and $\mathbfit{\beta} = \sum_{j=1}^n b_j \delta_{\mathbfit{z_j}}$ such that $\mathbfit{a}^\top \mathbfit{1} = 1$ and $\mathbfit{b}^\top \mathbfit{1} = 1$, and where  $\{\mathbfit{y_i}\in \mathbb{R}^d\}_{i=1}^m$, $\{\mathbfit{z_j}\in \mathbb{R}^d\}_{j=1}^n$ are support points.
+Also, we define a distance matrix $d_{ij} = d\left(\mathbfit{y_i},\mathbfit{z_j}\right)$, \emph{e.g.} the Euclidean distance $\|\mathbfit{y_i}-\mathbfit{z_j}\|_2$. Then, the $p$-Wasserstein distance is given by 
+\begin{equation*}
+\mathcal{W}_p(\mathbfit{\alpha},\mathbfit{\beta}) = \left(\min_{\mathbfit{\pi} \in \Pi\left(\mathbfit{\alpha},\mathbfit{\beta}\right)} \sum_{i,j} \pi_{ij}d_{ij}^p\right)^{\nicefrac{1}{p}},
+\end{equation*}
+ with $\Pi(\mathbfit{\alpha},\mathbfit{\beta}) = \left\{ \Pi \in \mathbb{R}^{m \times n} | \Pi \mathbfit{1}= \mathbfit{a} \; \mathrm{and} \; \Pi^\top \mathbfit{1}=\mathbfit{b} \right\}$, the set of joint distributions $\pi$ with specified marginals given by $\alpha$ and $\beta$. Intuitively, the optimal probability distribution $\pi^\star$ represents the optimal mass transportation scheme from $\alpha$ to $\beta$. A particular result occurs in the one-dimensional case ($d=1$) assuming the support points are ordered, \emph{i.e.}, $y_1 \leq \ldots \leq y_m$ and $z_1 \leq \ldots \leq z_n$ with $n=m$, where the Wasserstein distance reduces to an $\ell^p$-norm: $\mathcal{W}_p^p\left(\frac{1}{n} \sum_{i=1}^n\delta_{y_i}, \frac{1}{n}\sum_{j=1}^n \delta_{z_j}\right) = \tfrac{1}{n}||\mathbfit{y}-\mathbfit{z}||_p^p$~\cite{GabrielPeyre2019COTW}. This connection between $\ell^p$-norms and Wasserstein distances is only clear in one dimension, illustrating here again the fact that $\ell^p$-norms do not take into account the underlying structure. To do so, we need to consider the case $d>1$. In this way we can define the following kernel function 
+ \begin{equation}
+ k_W(\mathbfit{\alpha},\mathbfit{\beta}) = \mathrm{exp}\left(-\frac{W_2^2(\mathbfit{\alpha},\mathbfit{\beta})}{2\sigma^2}\right),\label{eq:kW}
+ \end{equation}
+where $\sigma > 0$ is a bandwidth parameter.
+
+This has however some undesirable consequences concerning positive definiteness.
+A kernel $k(\mathbfit{x},\mathbfit{y})=\exp\left( - t f(\mathbfit{x},\mathbfit{y})\right)$ is positive semi-definite for all $t>0$ if and only if $f(\mathbfit{x},\mathbfit{y})$ is Hermitian and \emph{conditionally} negative semi-definite~\cite{Berg1984}. Recall that a kernel is \emph{conditionally} negative semi-definite if any Gram matrix $F = [f(\mathbfit{x_i},\mathbfit{x_j})]_{i,j =1}^n$ (with $n\geq 2)$ built from a discrete sample satisfies $\mathbfit{c}^\top F \mathbfit{c}\leq 0$ for all $\mathbfit{c}$ such that $\mathbfit{1}^\top \mathbfit{c} =0$. However, the Wasserstein distance for $d>1$ is not necessarily \emph{conditionally} negative definite~\cite{GabrielPeyre2019COTW}. By consequence, we cannot guarantee that any resulting squared exponential kernel matrix built with the 2-Wasserstein distance is positive definite. This property is fundamental in kernel theory and more specifically for defining \emph{reproducing kernel Hilbert spaces} (RKHS; see~\cite{Scholkopf:2001:LKS:559923} for more details).
+
+%This however is not straightforward: Wasserstein distances are not Hilbertian in more than one dimension~\cite{GabrielPeyre2019COTW}. Key works by Schoenberg have established the equivalence between semi-positive definite distance matrices (????), negative definite square distances and Hilbert spaces.
+%REPRASE: Furthermore, this is also a necessary (and sufficient) condition for the Gaussian kernel to be semi-positive definite independently of the choice of the hyper-parameter $\sigma$~\cite{Berg1984}. In other words, we know that $k_W$ is indefinite in general.
+
+\section{Dealing with indefinite exponential kernels}
+This restriction has lead authors to consider only some specific cases of Wasserstein distances which are known to be positive definite. The one-dimensional generic case is proven to be positive definite and has lead to the introduction of sliced Wasserstein distances~\cite{Carriere2017,SlicedWasserstein}. Another notable case is the Wasserstein distance between two multivariate normal distributions in more than one dimension, which can even be written in closed form~\cite{GabrielPeyre2019COTW}.
+
+Some kernel methods have been used with indefinite kernels, such as LS-SVMs \cite{suykens:worldsci2002,Huang2017}. This leads however to a slightly different interpretation of the global problem, using Kre\u{\i}n spaces for which a weaker version of the representer theorem holds~\cite{Ong2004}. In this paper, we propose an alternative which allows to continue working with a positive definite kernel approximating the squared exponential kernel. If the Wasserstein exponential kernel can not be used, we can always find a parameter $\sigma>0$ and a finite dimensional feature map resulting in a positive definite kernel.
+
+%However, preliminary experiments tend to show that when working in Kre\u{\i}n spaces, the cross-validation tends to choose a $\sigma$ which results in a positive definite kernel matrix. As written here above, we know that the kernel matrix cannot be positive definite for all choices of $\sigma$, still it does not mean that it is always indefinite. Though, we can prove the contrary.
+
+\begin{figure}
+    \begin{align*}
+        \norm{\eqincludegraphics[height=3em]{pixel-center.pdf}-\eqincludegraphics[height=3em]{pixel-center.pdf}}_2^2 = 0, \qquad& \mathcal{W}_2^2\left(\eqincludegraphics[height=3em]{pixel-center.pdf},\eqincludegraphics[height=3em]{pixel-center.pdf} \right) = 0,\\
+        \norm{\eqincludegraphics[height=3em]{pixel-center.pdf}-\eqincludegraphics[height=3em]{pixel-right.pdf}}_2^2 = 2, \qquad& \mathcal{W}_2^2\left(\eqincludegraphics[height=3em]{pixel-center.pdf},\eqincludegraphics[height=3em]{pixel-right.pdf} \right) = 1,\\
+        \norm{\eqincludegraphics[height=3em]{pixel-center.pdf}-\eqincludegraphics[height=3em]{pixel-corner.pdf}}_2^2 = 2, \qquad& \mathcal{W}_2^2\left(\eqincludegraphics[height=3em]{pixel-center.pdf},\eqincludegraphics[height=3em]{pixel-corner.pdf} \right) = 8.
+    \end{align*}
+    \caption[The Wasserstein distance takes the underlying distance into account.]{Due to the incorporation of the cost, the Wasserstein distance is able to capture the underlying structure of an image. The pixels are not considered to be all equal to each other as with Euclidean norms, but their relative distances is taken into account.}
+\end{figure}
+
+
+
+\subsection{Positive definite squared exponential kernels and bandwidth choice}
+%Even if an exponential kernel matrix based on some 
+In this section, we show that for a given dataset, the corresponding Gram matrix of $k_W$ is positive definite if the bandwidth parameter $\sigma>0$ is small enough. 
+\begin{definition}\label{def1}
+Let $d: \mathcal{D} \times \mathcal{D} \rightarrow \mathbb{R}_{\geq 0}$ be a symmetric function such that $d(\mathbfit{x},\mathbfit{x}) =0$ and let $\left\{\mathbfit{x}_i \in \mathcal{D} \right\}_{i=1}^N$ be a dataset. A squared exponential kernel matrix is defined as
+\begin{equation*}
+    \mathbfit{K}_{d,\sigma} = \left[\exp\left( \dfrac{-d^2(\mathbfit{x}_i,\mathbfit{x}_j)}{2\sigma^2} \right) \right]_{i,j=1}^N.
+\end{equation*}
+\end{definition}
+By construction, this squared exponential kernel matrix will be symmetric and have a diagonal consisting only of ones. Its eigenvalues are real. To investigate its (semi)-definiteness, we have to investigate the sign of the minimum eigenvalue.
+The minimum eigenvalue $\lambda_{\mathrm{min}}\left( \sigma \right)$ of $\mathbfit{K}_{d,\sigma}$ is the function $\lambda_{\mathrm{min}} : \mathbb{R}_{>0} \rightarrow \mathbb{R}, \sigma \mapsto \min \left\{ \lambda_1, \ldots , \lambda_N \right\}$ where $\lambda_1, \ldots , \lambda_N$ are the eigenvalues of $\mathbfit{K}_{d,\sigma}$.
+We can now prove the following results.
+\begin{lemma}
+\label{lemma1}
+The eigenvalues of the squared exponential kernel matrix $\mathbfit{K}_{d,\sigma}$ are continuous functions of $\sigma$. In particular, $\lambda_{\mathrm{min}}\left( \sigma \right)$ is continuous.
+\end{lemma}
+\begin{proof}
+This is a direct consequence of the continuity of the roots of a polynomial with continuous coefficients. Therefore, we have to prove that the coefficients of the characteristic polynomial of the squared exponential kernel matrix $\mathbfit{K}_{d,\sigma}$ is continuous as a function of $\sigma$. The characteristic polynomial is given by $\mathrm{det}\left(\mathbfit{K}_{d,\sigma}-\lambda \mathbfit{I} \right)$ and by the formula of Leibniz, we ultimately have that the characteristic polynomial is a sum of products of elements of $\mathbfit{K}_{d,\sigma}-\lambda \mathbfit{I}$, which are continuous in function of $\sigma$. Hence, the coefficients are continuous and so are the eigenvalues.
+\end{proof}
+
+\begin{lemma}
+\label{lemma2}
+$\lim_{\sigma \to 0} \mathbfit{K}_{d,\sigma} = \mathrm{id}$ and thus $\lambda_{\mathrm{min}}\left(0\right) = 1$.
+\end{lemma}
+\begin{proof}
+From Definition~\ref{def1}, we know that $\left[ \mathbfit{K}_{d,\sigma} \right]_{i,j} = \exp\left( \tfrac{-d^2(\mathbfit{x}_i,\mathbfit{x}_j)}{2\sigma^2} \right)$ with $d^2(\mathbfit{x}_i,\mathbfit{x}_i)=0$ and $d^2(\mathbfit{x}_i,\mathbfit{x}_j)>0$ for $i\neq j$.  Denote $C_{i,j} = d^2(\mathbfit{x}_i,\mathbfit{x}_j)$ for simplicity. We have $\lim_{\sigma \to 0} \exp\left( \tfrac{0}{2\sigma^2} \right) = 1$ and $\lim_{\sigma \to 0} \exp\left(- \tfrac{C_{i,j}}{2\sigma^2} \right) = 0$ with $C_{i,j}>0$ for $i\neq j$, thus the identity matrix. By consequence, all the eigenvalues are equal to 1.
+\end{proof}
+
+\begin{lemma}
+\label{lemma3}
+We have 
+$\lim_{\sigma \to \infty} \mathbfit{K}_{d,\sigma} = \mathbfit{1}\mathbfit{1}^T$ and thus $\lim_{\sigma \to \infty}\lambda_{\mathrm{min}}\left(\sigma\right) = 0$.
+\end{lemma}
+\begin{proof}
+Similarly, we have $\lim_{\sigma \to +\infty} \left[ \mathbfit{K}_{d,\sigma} \right]_{i,j} = 1$ everywhere. By consequence, we have $\lambda_{\mathrm{max}}=N$ and all others equal to zero, hence $\lambda_{\mathrm{min}}=0$.
+\end{proof}
+
+\begin{proposition}
+\label{existence-sigma}
+There exists a $\sigma_{\mathrm{PSD}}\in \mathbb{R}_{+}$ such that $\mathbfit{K}_{d,\sigma}$ is positive semi-definite for all $\sigma \leq \sigma_{\mathrm{PSD}}$.
+\end{proposition}
+\begin{proof}
+Let us proceed \emph{ad absurdum} and suppose this is not the case. We consider the sequence $\left( \sigma_n \right)_n$ converging to 0 with $\sigma_0 = \sigma_{\mathrm{PSD}}$. There must exist some subsequence $\left( \sigma_{n_j} \right)_j$ such that $\left( \lambda_{\mathrm{min}}\left(\sigma_{n_j}\right) \right)_j < 0$. If this sequence is finite, then it is sufficient to consider a new sequence with $\sigma_{\mathrm{PSD}} = \sigma_{n_{j_{\mathrm{max}}}+1}$. If this subsequence is infinite, then $\left( \lambda_{\mathrm{min}}\left(\sigma_{n}\right) \right)_n$ cannot converge to 1. This is impossible because of the continuity of $\lambda_{\mathrm{min}}\left( \sigma \right)$ (Lemma~\ref{lemma1}) and its convergence to 1 (Lemma~\ref{lemma2}). Hence, there exist 
+some $\sigma_{\mathrm{PSD}}>0$ such that $\lambda_{\mathrm{min}}\left( \sigma \right)\geq 0$ for all $\sigma \leq \sigma_{\mathrm{PSD}}$. This proves our proposition.
+\end{proof}
+
+\begin{figure}
+    \centering
+    \def\svgwidth{\textwidth}\footnotesize
+    \import{chapters/wasskernels/image}{sigma_psd.pdf_tex}
+    \caption[]{}
+\end{figure}
+
+
+We can empirically see the result of Proposition~\ref{existence-sigma} in Fig.~\ref{kernels}, where all eigenvalues are positive. Intuitively, decreasing the bandwidth $\sigma$ tends to make the smallest distances more predominant, pushing the smallest eigenvalue progressively to the positive side. In this sense, an indefinite kernel matrix with $\sigma$ close to $\sigma_{\mathrm{PSD}}$ will lead to proportionally very small negative eigenvalues in magnitude. In this case, a finite positive definite approximation can be justified.
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering \footnotesize
+        \def\svgwidth{\linewidth}
+        \import{chapters/wasskernels/image}{l2_new.pdf_tex}
+        \caption{Euclidean}
+    \end{subfigure}%
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering \footnotesize
+        \def\svgwidth{\linewidth}
+        \import{chapters/wasskernels/image}{wass_new.pdf_tex}
+        \caption{Wasserstein}
+    \end{subfigure}%
+    \caption[Spectrum of the RBF and Wasserstein exponential kernels on MNIST.]{Comparison of the classical squared exponential kernel matrix (based on a $\ell^2$-distance) and the introduced Wasserstein exponential kernel matrix on 500 normalized digits of the MNIST dataset~\cite{lecun-mnisthandwrittendigit-2010}. The digits are ordered by class in ascending order. For the color legend, please refer to Fig.~\ref{wass-features}.}
+    \label{kernels}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Wasserstein features}
+We can consider a finite dimensional feature map $\mathbfit{\phi}(\mathbfit{x})$ such that the positive semi-definite kernel $\mathbfit{\phi}(\mathbfit{x})^\top \mathbfit{\phi}(\mathbfit{y})$ approximates $k_W(\mathbfit{x},\mathbfit{y})$ given in~\eqref{eq:kW}. This finite approximation is based on a training dataset $\left\{ \mathbfit{x}_i\right\}_{i=1}^N$ for constructing an original kernel matrix $\mathbfit{K} = \left[k_W(\mathbfit{x}_i,\mathbfit{x}_j)\right]_{i,j=1}^N \in \mathbb{R}^{N \times N}$. It suffices to truncate the spectral decomposition of the kernel matrix $\mathbfit{K} = \sum_{l=1}^N \lambda_l \mathbfit{v}_l \mathbfit{v}_l^\top$ to the $\ell$ largest strictly positive eigenvalues. This will result in a new positive semi-definite kernel matrix $\mathbfit{K}^{(\ell)} \defeq \sum_{l=1}^\ell \lambda_l \mathbfit{v}_l \mathbfit{v}_l^\top \succeq 0$ with $\lambda_1\geq \dots\geq \lambda_N$. We can now reconstruct the different components of an approximate feature map
+\begin{equation}
+    \phi_l\left(\mathbfit{x} \right) \defeq \tfrac{1}{\sqrt{\lambda_l}} \mathbfit{k}_{\mathbfit{x}}^\top \mathbfit{v}_l, \qquad \mathrm{for}\; i=1,\ldots,\ell,\label{eq:ApproxFeatureMap}
+\end{equation}
+with $\mathbfit{k}_{\mathbfit{x}} \defeq \left[ k_W(\mathbfit{x},\mathbfit{x}_1) \; \cdots \; k_W(\mathbfit{x},\mathbfit{x}_N) \right]^\top$. We refer to these different components as the \emph{Wasserstein features} as they compose the approximate feature map $\mathbfit{\phi}\left(\mathbfit{x}\right) \defeq \left[ \phi_1(\mathbfit{x}) \; \cdots \; \phi_\ell(\mathbfit{x}) \right]^\top$ of the Wasserstein exponential kernel. This approximate feature map is constructed by using a training dataset, but can afterwards be evaluated at any out-of-sample point. By construction, we can verify that the Wassertein features evaluated on the training dataset result in the truncated kernel matrix.
+\begin{proposition}
+    We have
+$    \left[ \mathbfit{\phi}(\mathbfit{x}_i)^\top \mathbfit{\phi}(\mathbfit{x}_j)\right]_{i,j=1}^N = \mathbfit{K}^{(\ell)}.
+$\label{prop:Kk}
+\end{proposition}
+\begin{proof}
+It suffices to observe that $\mathbfit{k}_{\mathbfit{x}_i} = \sum_{l=1}^N \lambda_l \mathbfit{v}_l \left[\mathbfit{v}_l\right]_i$. By consequence, we have $\phi_l(\mathbfit{x}_i) = \sqrt{\lambda_l}\left[\mathbfit{v}_l \right]_i$.
+\end{proof}
+Proposition~\ref{existence-sigma} suggests that even if no suitable $\sigma$ can be found such that the kernel matrix is psd, the negative eigenvalues will remain very small in magnitude. By consequence, we can suppress them without much information loss. A truncated kernel is thus very close to the original one in spectral norm. This justifies the Wasserstein features in this sense that they are very close to the Wasserstein exponential kernel as well as being positive definite by construction. This fact can be visualized on Fig.~\ref{wass-features}.
+
+\begin{figure*}[h!]
+    \centering
+    \begin{subfigure}[t]{0.20\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{feat-5.pdf}
+        \caption{$\ell =5$}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.20\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{feat-15.pdf}
+        \caption{$\ell=15$}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.20\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{feat-500.pdf}
+        \caption{$\ell=500$}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.20\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{exact.pdf}
+        \caption{Exact}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.053\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{colorbar.pdf}
+    \end{subfigure}
+    \caption[Reconstruction with Wasserstein features.]{Kernel matrices constructed as the inner products of a different number Wasserstein features of a test set. These matrices are compared with the exact Wasserstein squared exponential kernel matrix of the test set. Both the training set and the test set are of size $N=500$.}
+    \label{wass-features}
+\end{figure*}
+
+Clearly, the \emph{Wasserstein features} yield a positive semi-definite kernel. Moreover, it is also advantageous to work with finite dimensional feature maps to reduce the training time. Indeed, the computation of the Wasserstein distance (or an approximation with \emph{e.g.} Sinkhorn's algorithm~\cite{Lightspeed}) is still relatively expensive compared to $\ell^2$ distance. 
+
+\section{Experiments}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% TABLE OF RESULTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}[h!] %!htb or !htbp  ?
+% \begin{center}
+\centering
+\caption[Classification error comparison on multiple datasets.]{Percentage of classification error on the test set of three datasets. The standard deviation is given in parenthesis. The number of repeated simulations is 7 for MNIST, 8 for Quickdraw and 6 for USPS.}
+   \label{table:results}
+   \resizebox{\textwidth}{!}{
+    \begin{tabular}{r c c c c c c c}
+      \textbf{Dataset} & \multicolumn{2}{c}{\textbf{MNIST}} & \multicolumn{2}{c}{\textbf{Quickdraw}} & \multicolumn{2}{c}{\textbf{USPS }}   \\
+      \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7} \\
+      \textbf{Method} &\textbf{Avg.} & \textbf{Best} & \textbf{Avg.} & \textbf{Best} & \textbf{Avg.} & \textbf{Best} \\
+      Wass. LS-SVM (Core+OOS) & 3.95 ($\pm$ 0.18) & 3.74 & 11.45 ($\pm$ 0.39) & 10.97 & 6.77 ($\pm$ 0.52) & 6.20\\ 
+      Wass. LS-SVM (Core) & 3.81 ($\pm$ 0.34) & 3.28 & 10.80 ($\pm$ 0.19) & 10.52 & 7.93 ($\pm$ 1.45) & 6.35\\
+      Wass. LS-SVM (Indef.) & \textbf{3.40} ($\pm$ 0.11) & \textbf{3.23} & \textbf{10.75} ($\pm$ 0.27) & 10.35 & 6.15 ($\pm$ 0.67) & 5.45\\
+      R. Wass. LS-SVM (Core+OOS) & 3.91 ($\pm$ 0.27) & 3.45 & 11.79 ($\pm$ 0.48) & 10.95 & 6.68 ($\pm$ 0.80) & 5.70\\ 
+      R. Wass. LS-SVM (Core) & 3.71 ($\pm$ 0.15) & 3.46 & 10.99 ($\pm$ 0.44) & \textbf{10.07} & 6.35 ($\pm$ 0.11) & 6.20\\
+      R. Wass. LS-SVM (Indef.) & 3.48 ($\pm$ 0.13) & 3.29 & 12.43 ($\pm$ 0.43) & 11.95 & \textbf{5.70} ($\pm$ 0.29) & \textbf{5.40}\\
+      Wass. kNN & 6.31 ($\pm$ 0.33) & 5.81 & 12.26 ($\pm$ 0.33) & 11.91 & 6.60 ($\pm$ 0.44) & 6.00\\
+      & & & & & & \\
+      RBF LS-SVM & 4.26 ($\pm$ 0.10) & 4.07 & 11.46 ($\pm$ 0.20) & 11.23 & 6.75 ($\pm$ 0.04) & 6.70 \\
+      $\ell^2$ kNN & 7.20 ($\pm$ 0.15) & 6.95 & 15.32 ($\pm$ 0.40) & 14.68 & 7.52 ($\pm$ 0.38) & 7.20 \\
+      \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\\
+      \textbf{Set size} &\textbf{Core + OOS} & \textbf{Others} & \textbf{Core + OOS} & \textbf{Others} & \textbf{Core + OOS} & \textbf{Others} \\
+      Training & 1500 $+$ 2500 & 4000 & 500 + 750 & 1250 & 1000 + 1500 & 2500 \\
+      Validation & 5000 & 5000 & 5000 & 5000 & 2000 & 2000 \\
+      Test & 10 000 & 10 000 & 10 000 & 10 000 & 2000 & 2000
+    \end{tabular}
+   }
+%   \end{center}
+\end{table*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% IMAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{\textwidth}
+        \centering 
+        {\footnotesize
+        \def\svgwidth{\linewidth}
+        \import{chapters/wasskernels/image}{vals_normal.pdf_tex}}
+        \caption{Comparison of Wasserstein exponential kernels with other similar methods.}
+    \end{subfigure}%
+    \vfill
+    \begin{subfigure}[t]{\textwidth}
+        \centering 
+        {\footnotesize
+        \def\svgwidth{\linewidth}
+        \import{chapters/wasskernels/image}{vals_rew.pdf_tex}}
+        \caption{Comparison of \emph{reweighted} Wasserstein exponential kernels with other similar methods.}
+    \end{subfigure}%
+    \caption[Misclassification errors of Wasserstein exponential kernels on MNIST.]{Mean misclassification rates for various subset sizes of the MNIST dataset, computed on 7 simulations. The standard deviation is given by the errors bars. For the specific case of ``Core + OOS", the out-of-sample subset represents 300 datapoints on 500, 750 on 1250, 1500 on 2500 and 2500 on 4000. The size of validation set is always 5000 and of the test set always 10 000.}
+    \label{expe-shape}
+\end{figure}
+
+\subsection{Setup for 2D shape classification} 
+Let $\mathbfit{u}$ be a greyscale image that we unfold as a vector of length $m$ and so that $u_i>0$ is the ``grey" value at the pixel $\mathbfit{y_i}$ of a pixel grid. It is mapped to a probability $\mathbfit{\alpha} = \sum_{i=1}^m a_i \delta_{\mathbfit{y_i}}$ by defining $a_i = u_i/\|\mathbfit{u}\|_1$, so that the mass of $\mathbfit{\alpha}$ is one.
+In practice, the $p=2$ Wassertein distance is computed in this paper with the help of the well-known entropic regularization
+\begin{equation*}
+\mathcal{W}_{2,\epsilon}^{2}(\mathbfit{\alpha},\mathbfit{\beta}) = \min_{\mathbfit{\pi} \in \Pi\left(\mathbfit{\alpha},\mathbfit{\beta}\right)} \sum_{i,j}\left( \pi_{ij}d_{ij}^2 +\epsilon \pi_{ij}\log  \pi_{ij} \right),
+\end{equation*}
+where $\epsilon>0$ is a small regularization term and $d_{ij}^2$ is the Euclidean distance between pixels located at $\mathbfit{y_i}$ and $\mathbfit{y_j}$ in a pixel grid. The advantage of this regularized problem is that its solution can be efficiently obtained thanks to the Sinkhorn algorithm, which can be parallelized. For more details, we refer to~\cite{GabrielPeyre2019COTW}. All the simulations used $\epsilon
+= 2.5$ and the diagonal of the distance matrix set to zero. This choice of value was motivated by trial-and-error in order to make the regularization parameter large enough to be close to the exact Wasserstein distance, without being too large, which increases drastically the computation time and eventually leads to unstable iterations of Sinkhorn's algorithm.
+
+The full Wasserstein kernel matrix has $N^2$ elements, with $N$ the number of datapoints. Computing the full kernel matrix requires thus to compute $N^2/2$ pairwise distances as they are symmetric. By using the Wasserstein features, the number of pairwise distances to compute can be reduced to $N_1^2/2+N_1N_2$, where $N_1$ is the size of the training dataset and $N_2$ of the out-of-sample dataset. The computation of each pairwise Wasserstein distance has a complexity of $\widetilde O\left(n^2/\epsilon^3\right)$ where $n$ is the dimension of each datapoint and $\epsilon$ the regularization parameter~\cite{Altschuler2017}, compared to $O\left(n \right)$ for the Euclidean distance. However, Sinkhorn's algorithm can be implemented on GPUs, benefiting from their massive parallelization capabilities, allowing to compute pairwise distances from an arbitrary group of datapoints to a common datapoint together. 
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{.45\textwidth}
+        \centering
+        \def\svgwidth{\textwidth}\footnotesize
+        \import{chapters/wasskernels/image}{matrices_features_1.pdf_tex}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.45\textwidth}
+        \centering
+        \def\svgwidth{\textwidth}\footnotesize
+        \import{chapters/wasskernels/image}{matrices_features_2.pdf_tex}
+        \caption{}
+    \end{subfigure}
+    \caption[]{}
+\end{figure}
+
+\subsection{Shape recognition}
+We illustrate the use of the Wasserstein based kernels in the context of shape classifications. Namely, we train a Least Squares Support Vector Machine~\cite{LSSVM} classifier on  subsets of the MNIST~\cite{lecun-mnisthandwrittendigit-2010}, Quickdraw\footnote{\url{https://quickdraw.withgoogle.com/data}} and USPS~\cite{USPS} datasets, which are sampled uniformly at random.
+These three datasets contain handwritten digits and shapes.
+The multiclass problem is solved by a one-versus-one encoding. One instance of these binary classifiers $f(\mathbfit{x}) = \sign( \mathbfit{w}^{\star\top}\mathbfit{\phi}(\mathbfit{x}) +b^\star)$ is obtained by solving
+\begin{equation}
+\min_{\substack{\mathbfit{w}\in \mathbb{R}^\ell;b\in \mathbb{R}\\
+e_i\in \mathbb{R}}}\mathbfit{w}^\top\mathbfit{w} + \frac{\gamma}{N}\sum_{i=1}^{N} e_i^2 \text{ s.t. } e_i = y_i-\mathbfit{w}^\top\mathbfit{\phi}(\mathbfit{x}_i) -b, \label{eq:primal}
+\end{equation}
+where $y_i\in \{-1,1\}$ and $\mathbfit{\phi}(\mathbfit{x})\in \mathbb{R}^\ell$ is a feature map obtained for instance thanks to~\eqref{eq:ApproxFeatureMap}.
+The solution is obtained by solving
+\begin{equation*}
+\begin{bmatrix}
+        \sum_{i}\mathbfit{\phi}(\mathbfit{x_i})\mathbfit{\phi}(\mathbfit{x_i})^\top + \frac{N}{\gamma}\mathbb{I} & \sum_{i}\mathbfit{\phi}(\mathbfit{x_i})\\
+    \sum_{i}\mathbfit{\phi}(\mathbfit{x_i})^\top & N
+\end{bmatrix}
+\begin{bmatrix}
+\mathbfit{w}\\
+b
+\end{bmatrix}
+ = \begin{bmatrix}
+\sum_{i}y_i\mathbfit{\phi}(\mathbfit{x_i})\\
+\sum_{i}y_i
+\end{bmatrix},
+\end{equation*}
+which is a $(\ell+1)\times (\ell+1)$ linear system.
+A classifier can also be obtained by solving the dual problem of~\eqref{eq:primal}. The optimality conditions of this dual problem yield the following $(N+1)\times (N+1)$ linear system
+\begin{equation}
+\begin{bmatrix}
+        K + \frac{N}{\gamma}\mathbb{I} & \mathbfit{1}\\
+    \mathbfit{1}^\top & 0
+\end{bmatrix}
+\begin{bmatrix}
+\mathbfit{\alpha}\\
+b
+\end{bmatrix}
+ = \begin{bmatrix}
+\mathbfit{y}\\
+0
+\end{bmatrix}.\label{eq:dual}
+\end{equation}
+The resulting classifier has then the expression $f(\mathbfit{x}) = \sign(\sum_{i=1}^N \alpha_i^\star k(\mathbfit{x},\mathbfit{x_i}) +b^\star)$.
+The optimal hyperparameters $\sigma>0$ and $\gamma>0$ are estimated using grid search with validation on a hold-out set. The final classification is done by minimizing the Hamming distance on the one-versus-one outputs~\cite{mlssvm}.
+In order to account for the amount of ink  in the grey images $\mathbfit{u}$ and $\mathbfit{v}$, we also introduce a  reweighted kernel that is defined as
+\begin{equation}
+k_{RW}(\mathbfit{u},\mathbfit{v}) = \|\mathbfit{u}\|_1 \|\mathbfit{v}\|_1 k_W\left(\frac{\mathbfit{u}}{\|\mathbfit{u}\|_1},\frac{\mathbfit{v}}{\|\mathbfit{v}\|_1}\right).\label{eq:kernelRescaled}
+\end{equation} Notice that a similar kernel has been defined with the Euclidean distance in~\cite{Mairal2016,Mairal}.
+
+In our experiments, we compare several methods based on $k_W$ and $k_{RW}$, Wasserstein and Euclidean distances.
+\subsubsection{Core Wasserstein kernel}
+The ``Core" method consists of solving~\eqref{eq:primal} thanks to the feature map~\eqref{eq:ApproxFeatureMap} associated to $K^{(\ell)}$. The parameter $\ell$ is selected such that all the selected eigenvalues are larger than $10^{-6}$ to avoid numerical instabilities. The optimal $\mathbfit{w}^\star$ and $b^\star$ are then obtained by solving a linear system.
+
+
+\subsubsection{Core Wasserstein kernel with out-of-sample}
+Our second method named ``Core + OOS" uses almost the same methodology as ``Core". However, a subset of the training set is used to construct the truncated Wasserstein kernel of Proposition~\ref{prop:Kk}. Then the out-of-sample (OOS) formula~\eqref{eq:ApproxFeatureMap} is used to construct an approximation of the kernel matrix on the full training dataset. The advantage of this approximation is that it can avoid the full eigendecomposition of the kernel matrix which is necessary for the ``Core" method.
+\subsubsection{Indefinite Wasserstein kernel}
+ For this third method, we simply use the indefinite Gram matrix associated to~\eqref{eq:kernelRescaled} for the kernel matrix and solve the system~\eqref{eq:dual} associated to the dual formulation of LS-SVM. While the associated optimization problem is not necessarily bounded in that case, the linear system~\eqref{eq:dual} still has often a solution in practice. We name this method ``Indefinite Wasserstein" in Fig.~\ref{expe-shape}.
+\subsubsection{Gaussian RBF}
+The previous methods are compared with a classical LS-SVM classifier with kernel
+\[
+k(\mathbfit{u},\mathbfit{v}) = \exp\left( \dfrac{-\|\mathbfit{u}-\mathbfit{v}\|_2^2}{2\sigma^2} \right).
+\]
+The parameters $\sigma$ and $\gamma$ are obtained by validation in the same way as above.
+\subsubsection{KNN}
+The same task is also performed for a kNN classifiers defined both with Euclidean and Wasserstein distances~\cite{KNN_OT}. Those two methods are considered as benchmarks to assess the accuracy of the kernel methods hereabove. Notice that the number of nearest neighbours $k$ is selected by validation.
+\subsection{Description of the simulations}
+The simulations are repeated several times and the mean classification error rate is given as well as the standard deviation. We emphasize that the classes are balanced in each of the datasets. The code is provided on GitHub\footnote{\url{https://github.com/hdeplaen/Wasserstein_Exponential_Kernels}}.
+
+\subsection{Discussion}
+The results obtained by classifiers defined with Wasserstein exponential kernel $k_W$ outperform the Euclidean and Wasserstein kNN classifiers, as well as LS-SVM with a Gaussian RBF kernel (see Fig.~\ref{expe-shape} and Table~\ref{table:results}). The latter is especially outperformed when the number of training data points is limited to a few thousands. We observed empirically that the advantage of $k_W$ is indeed reduced as the size of the training set further increases. The reweighted version of the kernel $k_{RW}$ also proves to be competitive probably because it incorporates the information about the amount of ink, which was suppressed in the normal $k_W$ due to the normalization. However, the amount of ink seems to be a better class indicator in the Quickdraw dataset than in the two datasets consisting of digits. This counter-intuitive result may point towards the need for an alternative way of reincorporating the suppressed information due to the normalization.
+Surprisingly, the classifier obtained for the indefinite $k_W$ kernel yields the best performance when the training set is larger. This observation certainly deserves further research. For moderate size training sets, LS-SVM classifiers can be competitive with respect to other methods that do not rely on convolutional neural networks. The latter are known to be performant for relatively large training datasets.
+While an advantage of Wasserstein based methods is an increased accuracy in the classification tasks of this paper, a main disadvantage is the increased training time.
+
+
+\section{Conclusion}
+In this paper, we proposed the use of Wasserstein squared exponential kernels for classifying shapes given relatively small training datasets. Although the computation of Wasserstein distances is expensive, it can be made possible thanks to the entropic regularization and the Sinkhorn algorithm, as it is well known. The so-called Wasserstein features are also proposed to serve as an approximation of the Wasserstein squared exponential kernel which is not necessarily positive semidefinite. In particular, this construction is possible if the bandwidth parameter is small enough as it is explained by elementary theoretical results. These theoretical results also open a door to more general exponential kernels based on any measure of similarity.

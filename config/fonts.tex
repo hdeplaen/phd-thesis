@@ -1,3 +1,4 @@
+%% TEXT
 \usepackage{fontspec}
 
 \setmainfont{GARAMONDPREMRPRO}[%
@@ -6,7 +7,8 @@
     UprightFont     = *,
     BoldFont        = *-BD,
     ItalicFont      = *-IT,
-    BoldItalicFont  = *-BDIT]
+    BoldItalicFont  = *-BDIT,
+    RawFeature      = +pnum]
 
 \newfontfamily\GaramondCaption{GARAMONDPREMRPRO}[%
     Path            = ./fonts/garamond/,
@@ -14,7 +16,22 @@
     UprightFont     = *-CAPT,
     BoldFont        = *-BDCAPT,
     ItalicFont      = *-ITCAPT,
-    BoldItalicFont  = *-BDITCAPT]
+    BoldItalicFont  = *-BDITCAPT,
+    RawFeature      = +pnum]
+
+\newfontfamily\GaramondCaptionSMBD{GARAMONDPREMRPRO}[%
+Path            = ./fonts/garamond/,
+Extension       = .otf,
+UprightFont     = *-CAPT,
+BoldFont        = *-SMBDCAPT,
+ItalicFont      = *-ITCAPT,
+BoldItalicFont  = *-SMBDITCAPT,
+RawFeature      = +pnum]
+
+\newfontface\GaramondSwash{GARAMONDPREMRPRO-IT}[%
+    Path            = ./fonts/garamond/,
+    Extension       = .otf,
+    RawFeature      = +swsh]
 
 \newfontfamily\Helvetica{HelveticaNeue}[%
     Path            = ./fonts/helvetica/,
@@ -26,7 +43,40 @@
 
 \renewcommand{\sffamily}{\Helvetica}
 
+%% LIGATURES
+\usepackage{selnolig}
+\nolig{ct}{c|t}
+\nolig{sp}{s|p}
+\nolig{st}{s|t}
 
+%% MATH
+\usepackage[math-style=TeX, bold-style=TeX]{unicode-math}
 
+\setmathfont{Garamond-Math.otf}[
+    Path = ./fonts/garamond/
+]
 
-\usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
+% \setmathfont{garamondswash_italic.otf}[
+%     Path = ./fonts/garamond/,
+%     range = cal/{latin,Latin}
+% ]
+
+% \setmathfont{GARAMONDPREMRPRO-CAPT.otf}[
+%     Path  = ./fonts/garamond/,
+%     range = up/{latin,Latin,greek,Greek}
+% ]
+
+% \setmathfont{GARAMONDPREMRPRO-ITCAPT.otf}[
+%     Path  = ./fonts/garamond/,
+%     range = it/{latin,Latin,greek,Greek}
+% ]
+
+% \setmathfont{GARAMONDPREMRPRO-BDCAPT.otf}[
+%     Path  = ./fonts/garamond/,
+%     range = bfup/{latin,Latin,greek,Greek}
+% ]
+
+% \setmathfont{GARAMONDPREMRPRO-BDITCAPT.otf}[
+%     Path  = ./fonts/garamond/,
+%     range = bfit/{latin,Latin,greek,Greek}
+% ]

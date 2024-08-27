@@ -1,0 +1,253 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Unbalanced Optimal Transport for Object Detection}{19}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{cha:uotod}{{5}{19}{Unbalanced Optimal Transport for Object Detection}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{19}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}A Unifying Framework}{19}{subsection.5.1.1}\protected@file@percent }
+\newlabel{fig:general-img}{{{\GaramondCaption 5.1}a}{20}{Image \textnumero 163 from the VOC training dataset. The ground truth boxes are colored, and the predictions are outlined in black}{figure.caption.21}{}}
+\newlabel{sub@fig:general-img}{{a}{20}{Image \textnumero 163 from the VOC training dataset. The ground truth boxes are colored, and the predictions are outlined in black}{figure.caption.21}{}}
+\newlabel{fig:general-cost}{{{\GaramondCaption 5.1}b}{20}{Costs between the predictions and the ground truth ($1-\mathrm {GIoU}$). The background cost is $c_{\varnothing } = 0.8$}{figure.caption.21}{}}
+\newlabel{sub@fig:general-cost}{{b}{20}{Costs between the predictions and the ground truth ($1-\mathrm {GIoU}$). The background cost is $c_{\varnothing } = 0.8$}{figure.caption.21}{}}
+\newlabel{fig:general-min1}{{{\GaramondCaption 5.1}c}{20}{Prediction to best ground truth (\gls {uot} with $\epsilon =0$, $\tau _1\rightarrow +\infty $ and $\tau _2=0$)}{figure.caption.21}{}}
+\newlabel{sub@fig:general-min1}{{c}{20}{Prediction to best ground truth (\gls {uot} with $\epsilon =0$, $\tau _1\rightarrow +\infty $ and $\tau _2=0$)}{figure.caption.21}{}}
+\newlabel{fig:general-hungarian}{{{\GaramondCaption 5.1}d}{20}{Hungarian matching (\gls {ot} with $\epsilon =0$, $\tau _1 \rightarrow +\infty $ and $\tau _2 \rightarrow + \infty $)}{figure.caption.21}{}}
+\newlabel{sub@fig:general-hungarian}{{d}{20}{Hungarian matching (\gls {ot} with $\epsilon =0$, $\tau _1 \rightarrow +\infty $ and $\tau _2 \rightarrow + \infty $)}{figure.caption.21}{}}
+\newlabel{fig:general-min2}{{{\GaramondCaption 5.1}e}{20}{Ground truth to best prediction (\gls {uot} with $\epsilon =0$, $\tau _1 = 0 $ and $\tau _2 \rightarrow +\infty $)}{figure.caption.21}{}}
+\newlabel{sub@fig:general-min2}{{e}{20}{Ground truth to best prediction (\gls {uot} with $\epsilon =0$, $\tau _1 = 0 $ and $\tau _2 \rightarrow +\infty $)}{figure.caption.21}{}}
+\newlabel{fig:general-unb1}{{{\GaramondCaption 5.1}f}{20}{\gls {uot} with $\epsilon = 0.05$, $\tau _1=100$ and $\tau _2=0.01$}{figure.caption.21}{}}
+\newlabel{sub@fig:general-unb1}{{f}{20}{\gls {uot} with $\epsilon = 0.05$, $\tau _1=100$ and $\tau _2=0.01$}{figure.caption.21}{}}
+\newlabel{fig:general-reg}{{{\GaramondCaption 5.1}g}{20}{\gls {ot} with $\epsilon =0.05$ ($\tau _1 \rightarrow +\infty $ and $\tau _2 \rightarrow +\infty $)}{figure.caption.21}{}}
+\newlabel{sub@fig:general-reg}{{g}{20}{\gls {ot} with $\epsilon =0.05$ ($\tau _1 \rightarrow +\infty $ and $\tau _2 \rightarrow +\infty $)}{figure.caption.21}{}}
+\newlabel{fig:general-unb2}{{{\GaramondCaption 5.1}h}{20}{\gls {uot} with $\epsilon = 0.05$, $\tau _1=0.01$ and $\tau _2=100$}{figure.caption.21}{}}
+\newlabel{sub@fig:general-unb2}{{h}{20}{\gls {uot} with $\epsilon = 0.05$, $\tau _1=0.01$ and $\tau _2=100$}{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{\GaramondCaption 5.1}}{\ignorespaces Different matching strategies. All are particular cases of \emph  {Unbalanced Optimal Transport}. A match ($\hat {P}_{i,j}=1$) is denoted by a black square and it is white if there is no match ($\hat {P}_{i,j}=0$).}}{20}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:general}{{{\GaramondCaption 5.1}}{20}{Different matching strategies. All are particular cases of \emph {Unbalanced Optimal Transport}. A match ($\hat {P}_{i,j}=1$) is denoted by a black square and it is white if there is no match ($\hat {P}_{i,j}=0$)}{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Related Work}{22}{subsection.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Matching Strategies}{22}{subsection.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Optimal Transport}{22}{subsection.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Contributions}{23}{subsection.5.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Notations and Definitions}{23}{subsection.5.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Notations}{23}{subsection.5.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Definitions}{24}{subsection.5.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Optimal Transport}{24}{section.5.2}\protected@file@percent }
+\newlabel{def:OT}{{5.1}{24}{Optimal Transport}{definition.5.1}{}}
+\newlabel{fig:params-influence-bipartite}{{{\GaramondCaption 5.2}a}{25}{BM as a particular case of OT with no regularization ($\epsilon = 0$). The \emph {Hungarian algorithm} obtains the same solution}{figure.caption.22}{}}
+\newlabel{sub@fig:params-influence-bipartite}{{a}{25}{BM as a particular case of OT with no regularization ($\epsilon = 0$). The \emph {Hungarian algorithm} obtains the same solution}{figure.caption.22}{}}
+\newlabel{fig:params-influence-reg}{{{\GaramondCaption 5.2}b}{25}{OT with regularization ($\epsilon \neq 0$). The regularization smoothens the matching allowing for multiple connections.The problem here is fully balanced ($\tau _1, \tau _2 \rightarrow \infty $)}{figure.caption.22}{}}
+\newlabel{sub@fig:params-influence-reg}{{b}{25}{OT with regularization ($\epsilon \neq 0$). The regularization smoothens the matching allowing for multiple connections.The problem here is fully balanced ($\tau _1, \tau _2 \rightarrow \infty $)}{figure.caption.22}{}}
+\newlabel{fig:params-influence-unbalanced}{{{\GaramondCaption 5.2}c}{25}{Unbalanced OT with regularization ($\epsilon \neq 0$ and $\tau _1 \ll \tau _2$). The smoothing is also visible}{figure.caption.22}{}}
+\newlabel{sub@fig:params-influence-unbalanced}{{c}{25}{Unbalanced OT with regularization ($\epsilon \neq 0$ and $\tau _1 \ll \tau _2$). The smoothing is also visible}{figure.caption.22}{}}
+\newlabel{fig:params-influence-min}{{{\GaramondCaption 5.2}d}{25}{Matching each ground truth object to the closest prediction as Unbalanced OT without regularization with $\epsilon =0$, $\tau _1 = 0$ and $\tau _2 \rightarrow \infty $}{figure.caption.22}{}}
+\newlabel{sub@fig:params-influence-min}{{d}{25}{Matching each ground truth object to the closest prediction as Unbalanced OT without regularization with $\epsilon =0$, $\tau _1 = 0$ and $\tau _2 \rightarrow \infty $}{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{\GaramondCaption 5.2}}{\ignorespaces Example of the influence of the parameters. The blue dots represent predictions $\hat {\symbfit {y}}_i$. The red squares represent ground truth objects $\symbfit {y}_j$. The distributions $\symbfit {\mitalpha }$ and $\symbfit {\mitbeta }$ are defined as in Prop.~\ref {prop:lap}. The thickness of the lines is proportional to the amount transported $P_{i,j}$. Only sufficiently thick lines are plotted. The dummy \emph  {background} ground truth $\symbfit {y}_{N_g+1} = \varnothing $ is not shown, nor are the connections to it. We can see that the plots~\subref  {fig:params-influence-bipartite} and~\subref  {fig:params-influence-reg} are balanced and the mass constraints are respected ($\symbfit {P} \in \symcal {U}(\symbfit {\mitalpha },\symbfit {\mitbeta })$). This can be seen graphically by noticing that the thickness of the lines sum up to the same mass for each red point.}}{25}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:params-influence}{{{\GaramondCaption 5.2}}{25}{Example of the influence of the parameters. The blue dots represent predictions $\hat {\mathbfit {y}}_i$. The red squares represent ground truth objects $\mathbfit {y}_j$. The distributions $\mathbfit {\alpha }$ and $\mathbfit {\beta }$ are defined as in Prop.~\ref {prop:lap}. The thickness of the lines is proportional to the amount transported $P_{i,j}$. Only sufficiently thick lines are plotted. The dummy \emph {background} ground truth $\mathbfit {y}_{N_g+1} = \varnothing $ is not shown, nor are the connections to it. We can see that the plots~\subref {fig:params-influence-bipartite} and~\subref {fig:params-influence-reg} are balanced and the mass constraints are respected ($\mathbfit {P} \in \mathcal {U}(\mathbfit {\alpha },\mathbfit {\beta })$). This can be seen graphically by noticing that the thickness of the lines sum up to the same mass for each red point}{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}The Hungarian Algorithm}{25}{subsection.5.2.1}\protected@file@percent }
+\newlabel{def:lap}{{5.2}{25}{Bipartite Matching}{definition.5.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Particular Case of OT}{26}{equation.5.2.3}\protected@file@percent }
+\newlabel{prop:lap}{{5.1}{26}{}{proposition.5.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Solving the Problem}{27}{equation.5.2.4}\protected@file@percent }
+\newlabel{computational}{{5.2.1}{27}{Solving the Problem}{equation.5.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Regularization}{27}{subsection.5.2.2}\protected@file@percent }
+\newlabel{def:rOT}{{5.3}{27}{OT with regularization}{definition.5.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{\GaramondCaption 5.3}}{\ignorespaces Effect of the regularization on the minimization of the matching cost. The red line corresponds to the regularized problem ($\mitepsilon \neq 0$) and the blue to the unregularized one ($\mitepsilon = 0$).}}{28}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:ot-reg}{{{\GaramondCaption 5.3}}{28}{Effect of the regularization on the minimization of the matching cost. The red line corresponds to the regularized problem ($\epsilon \neq 0$) and the blue to the unregularized one ($\epsilon = 0$)}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Sinkhorn's Algorithm}{28}{figure.caption.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Smoother Matches}{28}{figure.caption.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Unbalanced Optimal Transport}{29}{subsection.5.2.3}\protected@file@percent }
+\newlabel{def:ruOT}{{5.4}{29}{Unbalanced OT}{definition.5.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Matching to the Closest}{29}{equation.5.2.7}\protected@file@percent }
+\newlabel{prop:threshold}{{5.2}{30}{Matching to the closest}{proposition.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{\GaramondCaption 5.4}}{\ignorespaces Limit cases of Unbalanced OT without regularization ($\mitepsilon =0$).}}{30}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:unbalanced-limits}{{{\GaramondCaption 5.4}}{30}{Limit cases of Unbalanced OT without regularization ($\epsilon =0$)}{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Scaling Algorithm}{30}{figure.caption.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Softmax}{31}{figure.caption.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Matching}{31}{section.5.3}\protected@file@percent }
+\newlabel{eq:matching-loss}{{5.3}{31}{Matching}{section.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Detection Transformer (DETR)}{31}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Single Shot MultiBox Detector (SSD)}{32}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Hard Negative Mining}{32}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Experimental Results \& Discussion}{32}{section.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {{\GaramondCaption 5.5}}{\ignorespaces Convergence curves for DETR on the Color Boxes dataset. The model converges faster with a regularized matching.}}{33}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:DETRmAPtoy}{{{\GaramondCaption 5.5}}{33}{Convergence curves for DETR on the Color Boxes dataset. The model converges faster with a regularized matching}{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Setup}{33}{subsection.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Datasets}{33}{subsection.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Training}{33}{subsection.5.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {{\GaramondCaption 5.1}}{\ignorespaces Object detection metrics for different models and loss functions on the Color Boxes and COCO datasets.}}{34}{table.caption.26}\protected@file@percent }
+\newlabel{tab:metrics_stats}{{{\GaramondCaption 5.1}}{34}{Object detection metrics for different models and loss functions on the Color Boxes and COCO datasets}{table.caption.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Timing Analysis for SSD}{34}{subsection.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Unified Matching Strategy}{34}{subsection.5.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{DETR and Deformable DETR}{34}{subsection.5.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {{\GaramondCaption 5.2}}{\ignorespaces Timing for each step in SSD300 on Color Boxes and a batch size of 16, computed with an Nvidia TITAN X GPU and Intel Core i7-4770K CPU @ 3.50GHz. Likewise the models we built upon, we used \textit  {Torchvision's} anchor generation implementation, which extensively relies on heavy loops and could drastically be improved (not the focus of our work). The final losses timings are partially due to the expensive hard-negative mining.}}{35}{table.caption.27}\protected@file@percent }
+\newlabel{tab:ssd_timings}{{{\GaramondCaption 5.2}}{35}{Timing for each step in SSD300 on Color Boxes and a batch size of 16, computed with an Nvidia TITAN X GPU and Intel Core i7-4770K CPU @ 3.50GHz. Likewise the models we built upon, we used \textit {Torchvision's} anchor generation implementation, which extensively relies on heavy loops and could drastically be improved (not the focus of our work). The final losses timings are partially due to the expensive hard-negative mining}{table.caption.27}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {{\GaramondCaption 5.3}}{\ignorespaces Comparison of matching strategies on the Color Boxes dataset. SSD300 is evaluated both with and without NMS.}}{35}{table.caption.28}\protected@file@percent }
+\newlabel{tab:removal_of_nms_ssd}{{{\GaramondCaption 5.3}}{35}{Comparison of matching strategies on the Color Boxes dataset. SSD300 is evaluated both with and without NMS}{table.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {{\GaramondCaption 5.6}}{\ignorespaces Average and standard deviation of the computation time for different matching strategies on COCO with batch size $16$. The Hungarian algorithm is computed with \textit  {SciPy} and its time includes the transfer of the cost matrix from GPU memory to RAM. We run $20$ Sinkhorn iterations. Computed with an Nvidia TITAN X GPU and Intel Core i7-4770K CPU @ 3.50GHz.}}{36}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:avg_matching_time}{{{\GaramondCaption 5.6}}{36}{Average and standard deviation of the computation time for different matching strategies on COCO with batch size $16$. The Hungarian algorithm is computed with \textit {SciPy} and its time includes the transfer of the cost matrix from GPU memory to RAM. We run $20$ Sinkhorn iterations. Computed with an Nvidia TITAN X GPU and Intel Core i7-4770K CPU @ 3.50GHz}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {subsubsection}{SSD and the Constraint Parameter}{36}{table.caption.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Computation Time}{37}{figure.caption.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Conclusion and Future Work}{37}{section.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Limitations and Future Work}{37}{section.5.5}\protected@file@percent }
+\@setckpt{chapters/uotod/uotod}{
+\setcounter{page}{38}
+\setcounter{equation}{8}
+\setcounter{enumi}{4}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{1}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{5}
+\setcounter{section}{5}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{6}
+\setcounter{table}{3}
+\setcounter{su@anzahl}{0}
+\setcounter{parentequation}{0}
+\setcounter{DTLrowi}{1}
+\setcounter{DTLrowii}{0}
+\setcounter{DTLrowiii}{0}
+\setcounter{DTLrow}{9}
+\setcounter{lstnumber}{1}
+\setcounter{section@level}{0}
+\setcounter{Item}{4}
+\setcounter{Hfootnote}{3}
+\setcounter{bookmark@seq@number}{39}
+\setcounter{lofdepth}{1}
+\setcounter{lotdepth}{1}
+\setcounter{r@tfl@t}{0}
+\setcounter{caption@flags}{2}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
+\setcounter{tabx@nest}{0}
+\setcounter{listtotal}{0}
+\setcounter{listcount}{0}
+\setcounter{liststart}{0}
+\setcounter{liststop}{0}
+\setcounter{citecount}{0}
+\setcounter{citetotal}{0}
+\setcounter{multicitecount}{0}
+\setcounter{multicitetotal}{0}
+\setcounter{instcount}{117}
+\setcounter{maxnames}{99}
+\setcounter{minnames}{1}
+\setcounter{maxitems}{3}
+\setcounter{minitems}{1}
+\setcounter{citecounter}{0}
+\setcounter{maxcitecounter}{0}
+\setcounter{savedcitecounter}{0}
+\setcounter{uniquelist}{0}
+\setcounter{uniquename}{0}
+\setcounter{refsection}{0}
+\setcounter{refsegment}{0}
+\setcounter{maxextratitle}{0}
+\setcounter{maxextratitleyear}{0}
+\setcounter{maxextraname}{2}
+\setcounter{maxextradate}{0}
+\setcounter{maxextraalpha}{2}
+\setcounter{abbrvpenalty}{5000}
+\setcounter{highnamepenalty}{5000}
+\setcounter{lownamepenalty}{2500}
+\setcounter{maxparens}{3}
+\setcounter{parenlevel}{0}
+\setcounter{blx@maxsection}{0}
+\setcounter{mincomprange}{10}
+\setcounter{maxcomprange}{100000}
+\setcounter{mincompwidth}{1}
+\setcounter{afterword}{0}
+\setcounter{savedafterword}{0}
+\setcounter{annotator}{0}
+\setcounter{savedannotator}{0}
+\setcounter{author}{0}
+\setcounter{savedauthor}{0}
+\setcounter{bookauthor}{0}
+\setcounter{savedbookauthor}{0}
+\setcounter{commentator}{0}
+\setcounter{savedcommentator}{0}
+\setcounter{editor}{0}
+\setcounter{savededitor}{0}
+\setcounter{editora}{0}
+\setcounter{savededitora}{0}
+\setcounter{editorb}{0}
+\setcounter{savededitorb}{0}
+\setcounter{editorc}{0}
+\setcounter{savededitorc}{0}
+\setcounter{foreword}{0}
+\setcounter{savedforeword}{0}
+\setcounter{holder}{0}
+\setcounter{savedholder}{0}
+\setcounter{introduction}{0}
+\setcounter{savedintroduction}{0}
+\setcounter{namea}{0}
+\setcounter{savednamea}{0}
+\setcounter{nameb}{0}
+\setcounter{savednameb}{0}
+\setcounter{namec}{0}
+\setcounter{savednamec}{0}
+\setcounter{translator}{0}
+\setcounter{savedtranslator}{0}
+\setcounter{shortauthor}{0}
+\setcounter{savedshortauthor}{0}
+\setcounter{shorteditor}{0}
+\setcounter{savedshorteditor}{0}
+\setcounter{labelname}{0}
+\setcounter{savedlabelname}{0}
+\setcounter{institution}{0}
+\setcounter{savedinstitution}{0}
+\setcounter{lista}{0}
+\setcounter{savedlista}{0}
+\setcounter{listb}{0}
+\setcounter{savedlistb}{0}
+\setcounter{listc}{0}
+\setcounter{savedlistc}{0}
+\setcounter{listd}{0}
+\setcounter{savedlistd}{0}
+\setcounter{liste}{0}
+\setcounter{savedliste}{0}
+\setcounter{listf}{0}
+\setcounter{savedlistf}{0}
+\setcounter{location}{0}
+\setcounter{savedlocation}{0}
+\setcounter{organization}{0}
+\setcounter{savedorganization}{0}
+\setcounter{origlocation}{0}
+\setcounter{savedoriglocation}{0}
+\setcounter{origpublisher}{0}
+\setcounter{savedorigpublisher}{0}
+\setcounter{publisher}{0}
+\setcounter{savedpublisher}{0}
+\setcounter{language}{0}
+\setcounter{savedlanguage}{0}
+\setcounter{origlanguage}{0}
+\setcounter{savedoriglanguage}{0}
+\setcounter{pageref}{0}
+\setcounter{savedpageref}{0}
+\setcounter{textcitecount}{0}
+\setcounter{textcitetotal}{0}
+\setcounter{textcitemaxnames}{0}
+\setcounter{biburlbigbreakpenalty}{100}
+\setcounter{biburlbreakpenalty}{200}
+\setcounter{biburlnumpenalty}{0}
+\setcounter{biburlucpenalty}{0}
+\setcounter{biburllcpenalty}{0}
+\setcounter{smartand}{1}
+\setcounter{bbx:relatedcount}{0}
+\setcounter{bbx:relatedtotal}{0}
+\setcounter{ALC@unique}{0}
+\setcounter{ALC@line}{0}
+\setcounter{ALC@rem}{0}
+\setcounter{ALC@depth}{0}
+\setcounter{definition}{4}
+\setcounter{proposition}{2}
+\setcounter{corollary}{0}
+\setcounter{lemma}{0}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{lstlisting}{0}
+}

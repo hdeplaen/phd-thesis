@@ -1,0 +1,6 @@
+\nomenclatureentry{a$N$@[{$N$}]\begingroup A number, assumed to lie in $\mathbb{N}$.\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{a$a$@[{$a$}]\begingroup A scalar, assumed to lie in $\mathbb{R}$.\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{a$\mathbfit{v}$@[{$\mathbfit{v}$}]\begingroup A vector, assumed to lie in a space $\mathbb{R}^N$.\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{a$\mathbfit{M}$@[{$\mathbfit{M}$}]\begingroup A matrix, assumed to lie in a space $\mathbb{R}^{N \times M}$.\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{a$\mathbfit{I}_N$@[{$\mathbfit{I}_N$}]\begingroup Identity matrix of size $N \times N$.\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{a$\cdot^\top$@[{$\cdot^\top$}]\begingroup Transpose operator\nomeqref {0}|nompageref}{vii}

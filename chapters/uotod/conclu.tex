@@ -1,0 +1,7 @@
+\section{Conclusion and Future Work}
+
+Throughout the paper, we showed both theoretically and experimentally how \emph{Unbalanced Optimal Transport} unifies the \emph{Hungarian algorithm}, matching each ground truth object to the best prediction and each prediction to the best ground truth, with or without threshold. 
+
+Experimentally, using OT and Unbalanced OT with entropic regularization is on par with the state-of-the-art for DETR, Deformable DETR and SSD. Moreover, we showed that entropic regularization lets DETR converge faster on the Color Boxes dataset and that parameter $\tau_2$ offers better control of the precision-recall trade-off. Finally, we showed that the \emph{scaling algorithms} compute large numbers of matches faster than the Hungarian algorithm.
+
+\subsubsection{Limitations and Future Work} The convergence improvement of the regularized OT formulation compared to bipartite matching seems to hold only for DETR and on small-scale datasets. Further investigations may include Wasserstein-based matching costs for a further unification of the theory and the reduction of the entropy with time, as it seems to boost convergence only in early phases, but not in fine-tuning.

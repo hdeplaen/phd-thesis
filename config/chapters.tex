@@ -2,7 +2,7 @@
 \usepackage{titlesec}
 
 \titleformat{\chapter}[display]
-{\huge\GaramondCaption\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge\centering}
+{\Large\GaramondCaption\bfseries\centering}{{\MakeUppercase\chaptertitlename\hspace*{.5em}\thechapter}}{0pt}{\Huge\centering}
 
 \titleformat{\section}
 {\GaramondCaption\Large\bfseries}{\thesection}{1em}{}
@@ -16,10 +16,20 @@
 
 % QUOTE
 \makeatletter
-\newenvironment{chapquote}[2][.5\textwidth]
+\newenvironment{chapquote}[2][.55\textwidth]
   {\setlength{\@tempdima}{#1}%
    \def\chapquote@author{#2}%
    \parshape 1 \@tempdima \dimexpr\textwidth-\@tempdima-2em\relax%
-   \itshape}
-  {\par\normalfont\hfill---\ \chapquote@author\hspace*{2em}\par\bigskip}
+   \GaramondSwash}
+  {\par\normalfont\hfill---\ {\GaramondCaption\chapquote@author}\hspace*{2em}\par\bigskip}
 \makeatother
+
+
+
+%% FIGURES AND TABLES
+\addto{\captionsenglish}{%
+  \renewcommand{\figurename}{{\GaramondCaption\textsc{Figure}}}
+  \renewcommand{\tablename}{{\GaramondCaption\textsc{Table}}}
+  \renewcommand{\thefigure}{{\GaramondCaption\thechapter.\arabic{figure}}}
+  \renewcommand{\thetable}{{\GaramondCaption\thechapter.\arabic{table}}} 
+}

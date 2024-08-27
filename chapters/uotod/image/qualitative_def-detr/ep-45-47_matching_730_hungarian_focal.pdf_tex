@@ -1,0 +1,111 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'ep-45-47_matching_730_hungarian_focal.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{472.90576205bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.36210572)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.10274199,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.14323009,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}B\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.18371819,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}C\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.22420631,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}D\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.26469441,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}E\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.30518251,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\varnothing$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.06769583,0.27415906){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}96\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.06769583,0.23367096){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}186\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.06769583,0.19318286){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}201\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.06769583,0.15269474){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}243\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.06769583,0.11220664){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}245\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.06769583,0.07171854){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}297\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.20396225,0.32599289){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}epoch 45\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.39425636,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.43474444,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}B\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.47523256,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}C\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.51572068,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}D\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.55620876,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}E\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.59669688,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\varnothing$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.49547662,0.32599289){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}epoch 46\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.68577073,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.72625884,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}B\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.7667469,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}C\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.80723501,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}D\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.84772313,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}E\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.88821125,0.02094201){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\varnothing$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{ep-45-47_matching_730_hungarian_focal.pdf}}%
+    \put(0.78699099,0.32599289){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}epoch 47\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

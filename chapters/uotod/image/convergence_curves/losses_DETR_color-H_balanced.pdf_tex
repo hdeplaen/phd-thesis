@@ -1,0 +1,230 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'losses_DETR_color-H_balanced.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{792bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.67272726)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.0804798,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.14821653,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.21595328,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.28369001,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.35142674,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.41916351,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.48690024,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.47683456){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.50683793){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.5368413){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.56684466){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.59684803){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2.5\end{tabular}}}}%
+    \put(0.03026199,0.54751682){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}CE loss\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.28369001,0.64272726){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Training\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.36361428,0.58899305){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hungarian\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.36361428,0.55934027){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OT\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.5606818,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.62841853,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.69615526,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.76389203,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.8316288,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.89936549,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.96710226,0.44831964){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.47683456){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.50683793){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.5368413){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.56684466){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2.0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.59684803){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.76389203,0.64272726){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Validation\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.84381625,0.58899305){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hungarian\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.84381625,0.55934027){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OT\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.0804798,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.14821653,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.21595328,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.28369001,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=35]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.35142674,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=36]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.41916351,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=37]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.48690024,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=38]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.29325409){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=39]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.33325859){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=40]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.37326307){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1.2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=41]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.41326757){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1.6\end{tabular}}}}%
+    \put(0.030262,0.34593434){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}GIOU loss\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=42]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.36361428,0.38741055){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hungarian\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=43]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.36361428,0.35775779){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OT\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=44]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.5606818,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=45]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.62841853,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=46]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.69615526,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=47]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.76389203,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=48]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.8316288,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=49]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.89936549,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=50]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.96710226,0.24673717){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=51]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.29325409){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=52]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.33325859){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.8\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=53]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.37326307){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1.2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=54]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.41326757){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1.6\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=55]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.84381625,0.38741055){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hungarian\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=56]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.84381625,0.35775779){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OT\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=57]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.0804798,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=58]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.14821653,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=59]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.21595328,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=60]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.28369001,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=61]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.35142674,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=62]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.41916351,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=63]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.48690024,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}150\end{tabular}}}}%
+    \put(0.28369001,0.02055237){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Epoch\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=64]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.08922235){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=65]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.11983804){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=66]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.15045372){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.3\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=67]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.1810694){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=68]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.07164141,0.21168508){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.5\end{tabular}}}}%
+    \put(0.03026199,0.14435185){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}L1 loss\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=69]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.36361428,0.18582806){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hungarian\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=70]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.36361428,0.1561753){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OT\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=71]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.5606818,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=72]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.62841853,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=73]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.69615526,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=74]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.76389203,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}75\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=75]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.8316288,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=76]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.89936549,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}125\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=77]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.96710226,0.04515466){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}150\end{tabular}}}}%
+    \put(0.76389203,0.02055237){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Epoch\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=78]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.08922235){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=79]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.11983804){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=80]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.15045372){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.3\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=81]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.1810694){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=82]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.55184342,0.21168508){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=83]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.84381625,0.18582806){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hungarian\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=84]{losses_DETR_color-H_balanced.pdf}}%
+    \put(0.84381625,0.1561753){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OT\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

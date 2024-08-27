@@ -1,9 +1,26 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'out\main.blg'
-[121] biber-MSWIN64:340> INFO - === 
-[160] Biber.pm:420> INFO - Reading 'out/main.bcf'
-[290] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
-[306] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
-[306] bbl.pm:779> INFO - Output to out\main.bbl
-[306] Biber.pm:131> WARN - The file 'out/main.bcf' does not contain any citations!
-[307] Biber.pm:133> INFO - WARNINGS: 1
+[118] biber-MSWIN64:340> INFO - === 
+[154] Biber.pm:420> INFO - Reading 'out/main.bcf'
+[303] Biber.pm:994> INFO - Found 86 citekeys in bib section 0
+[319] Biber.pm:4463> INFO - Processing section 0
+[332] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[406] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1029] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[1713] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1713] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1713] Biber.pm:4283> INFO - Sorting list 'anyt/global//global/global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[1713] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1819] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
+[1896] bbl.pm:779> INFO - Output to out\main.bbl
+[1896] Biber.pm:131> WARN - Possible typo (case mismatch) between datasource keys: 'lightspeed' and 'Lightspeed' in file 'bibliography.bib'
+[1896] Biber.pm:131> WARN - Duplicate entry key: 'peyre2019computational' in file 'bibliography.bib', skipping ...
+[1896] Biber.pm:131> WARN - Possible typo (case mismatch) between datasource keys: 'GENRKM' and 'GenRKM' in file 'bibliography.bib'
+[1896] Biber.pm:131> WARN - Duplicate entry key: 'arjovsky2017wasserstein' in file 'bibliography.bib', skipping ...
+[1896] Biber.pm:131> WARN - ISBN '1581138285' in entry 'Ong2004' is invalid - run biber with '--validate_datamodel' for details.
+[1896] Biber.pm:131> WARN - legacy month field 'jun' in entry 'giou' is not an integer - this will probably not sort properly.
+[1896] Biber.pm:131> WARN - legacy month field 'December' in entry 'girshick2015fast' is not an integer - this will probably not sort properly.
+[1896] Biber.pm:131> WARN - legacy month field 'June' in entry 'Han_2020_CVPR_Workshops' is not an integer - this will probably not sort properly.
+[1896] Biber.pm:131> WARN - legacy month field '18--24 Jul' in entry 'pmlr-v139-yang21l' is not an integer - this will probably not sort properly.
+[1896] Biber.pm:131> WARN - legacy month field 'apr' in entry 'hungarian-cubic' is not an integer - this will probably not sort properly.
+[1896] Biber.pm:133> INFO - WARNINGS: 10

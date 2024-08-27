@@ -1,0 +1,127 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'ep-25-27_matching_613_hungarian.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{464.63453221bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.69822267)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.08676934,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.1279782,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}B\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.16918705,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}C\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.21039593,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}D\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.25160478,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}E\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.29281365,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\varnothing$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.60871042){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}14\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.56750156){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}21\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.52629271){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}33\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.48508383){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}36\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.44387498){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}37\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.40266612){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}57\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.36145725){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}62\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.32024841){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}63\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.27903954){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}65\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.23783067){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}66\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.19662183){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}81\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.15541296){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}83\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.11420409){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}92\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.0510993,0.07299522){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}99\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.18979149,0.66146697){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}epoch 25\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.38347313,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.424682,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}B\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.46589084,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}C\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.50709971,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}D\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.54830858,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}E\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.58951745,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\varnothing$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.48649527,0.66146697){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}epoch 26\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.68017689,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.72138576,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}B\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.76259463,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}C\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.80380351,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}D\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.84501238,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}E\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.88622125,0.02131478){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\varnothing$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=35]{ep-25-27_matching_613_hungarian.pdf}}%
+    \put(0.7831991,0.66146697){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}epoch 27\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.48 199.23">
+  <title>sets</title>
+  <g>
+    <ellipse cx="185.26" cy="107.25" rx="185.02" ry="91.74" style="stroke: #000;stroke-width: 0.48496049642562866px;opacity: 0.10000000149011612;isolation: isolate"/>
+    <ellipse cx="341.21" cy="106.75" rx="185.02" ry="91.74" style="stroke: #000;stroke-width: 0.48496049642562866px;opacity: 0.10000000149011612;isolation: isolate"/>
+    <g style="isolation: isolate">
+      <text transform="translate(130.91 8.64)" style="isolation: isolate;font-size: 10px;font-family: ArialMT, Arial">$\spt{\mathbfit{P}_1^{\mathrm{unif.}}}$</text>
+    </g>
+    <g style="isolation: isolate">
+      <text transform="translate(317.54 8.58)" style="isolation: isolate;font-size: 10px;font-family: ArialMT, Arial">$\spt{\mathbfit{P}_2^{\mathrm{unif.}}}$</text>
+    </g>
+    <g style="isolation: isolate">
+      <text transform="translate(36.63 96.6)" style="isolation: isolate;font-size: 10px;font-family: ArialMT, Arial">\shortstack{$\spt{\mathbfit{P}_1^{\mathrm{unif.}}}$\\$\setminus\spt{\mathbfit{P}_2^{\mathrm{unif.}}}$}</text>
+    </g>
+    <g style="isolation: isolate">
+      <text transform="translate(383.73 96.01)" style="isolation: isolate;font-size: 10px;font-family: ArialMT, Arial">\shortstack{$\spt{\mathbfit{P}_2^{\mathrm{unif.}}}$\\$\setminus\spt{\mathbfit{P}_1^{\mathrm{unif.}}}$}</text>
+    </g>
+    <g style="isolation: isolate">
+      <text transform="translate(210.73 97.14)" style="isolation: isolate;font-size: 10px;font-family: ArialMT, Arial">\shortstack{$\spt{\mathbfit{P}_1^{\mathrm{unif.}}}$\\$\cap\spt{\mathbfit{P}_2^{\mathrm{unif.}}}$}</text>
+    </g>
+  </g>
+</svg>

@@ -4,12 +4,31 @@
 \babel@toc {dutch}{}\relax 
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
 \babel@toc {dutch}{}\relax 
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {{\GaramondCaption 1.1}}{\ignorespaces Cylinder projected as a circle and a square.}}{2}{figure.caption.13}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {{\GaramondCaption 4.1}}{\ignorespaces The Wasserstein distance takes the underlying distance into account.}}{8}{figure.caption.14}%
+\contentsline {figure}{\numberline {{\GaramondCaption 4.3}}{\ignorespaces Spectrum of the RBF and Wasserstein exponential kernels on MNIST.}}{11}{figure.caption.16}%
+\contentsline {figure}{\numberline {{\GaramondCaption 4.4}}{\ignorespaces Reconstruction with Wasserstein features.}}{12}{figure.caption.17}%
+\contentsline {figure}{\numberline {{\GaramondCaption 4.5}}{\ignorespaces Misclassification errors of Wasserstein exponential kernels on MNIST.}}{13}{figure.caption.19}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {{\GaramondCaption 5.1}}{\ignorespaces Different matching strategies. All are particular cases of \emph {Unbalanced Optimal Transport}. A match ($\hat {P}_{i,j}=1$) is denoted by a black square and it is white if there is no match ($\hat {P}_{i,j}=0$).}}{20}{figure.caption.21}%
+\contentsline {figure}{\numberline {{\GaramondCaption 5.2}}{\ignorespaces Example of the influence of the parameters. The blue dots represent predictions $\hat {\symbfit {y}}_i$. The red squares represent ground truth objects $\symbfit {y}_j$. The distributions $\symbfit {\mitalpha }$ and $\symbfit {\mitbeta }$ are defined as in Prop.~\ref {prop:lap}. The thickness of the lines is proportional to the amount transported $P_{i,j}$. Only sufficiently thick lines are plotted. The dummy \emph {background} ground truth $\symbfit {y}_{N_g+1} = \varnothing $ is not shown, nor are the connections to it. We can see that the plots~\subref {fig:params-influence-bipartite} and~\subref {fig:params-influence-reg} are balanced and the mass constraints are respected ($\symbfit {P} \in \symcal {U}(\symbfit {\mitalpha },\symbfit {\mitbeta })$). This can be seen graphically by noticing that the thickness of the lines sum up to the same mass for each red point.}}{25}{figure.caption.22}%
+\contentsline {figure}{\numberline {{\GaramondCaption 5.3}}{\ignorespaces Effect of the regularization on the minimization of the matching cost. The red line corresponds to the regularized problem ($\mitepsilon \neq 0$) and the blue to the unregularized one ($\mitepsilon = 0$).}}{28}{figure.caption.23}%
+\contentsline {figure}{\numberline {{\GaramondCaption 5.4}}{\ignorespaces Limit cases of Unbalanced OT without regularization ($\mitepsilon =0$).}}{30}{figure.caption.24}%
+\contentsline {figure}{\numberline {{\GaramondCaption 5.5}}{\ignorespaces Convergence curves for DETR on the Color Boxes dataset. The model converges faster with a regularized matching.}}{33}{figure.caption.25}%
+\contentsline {figure}{\numberline {{\GaramondCaption 5.6}}{\ignorespaces Average and standard deviation of the computation time for different matching strategies on COCO with batch size $16$. The Hungarian algorithm is computed with \textit {SciPy} and its time includes the transfer of the cost matrix from GPU memory to RAM. We run $20$ Sinkhorn iterations. Computed with an Nvidia TITAN X GPU and Intel Core i7-4770K CPU @ 3.50GHz.}}{36}{figure.caption.29}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {{\GaramondCaption 6.1}}{\ignorespaces Dependency graph of the Recurrent RKM model's \emph {training}~\eqref {eq:rrkm_stat_pt_hi} and \emph {prediction}~\eqref {eq:pred_forward_hn+i+1} scheme for $a_{t,l}=1$ if $l=1$ and $a_{t,l}=0$ otherwise, and a linear kernel on $\symscr {X}$.}}{40}{figure.caption.31}%
+\contentsline {figure}{\numberline {{\GaramondCaption 6.2}}{\ignorespaces Training and predicted latent variables of a sinusoidal data set.}}{42}{figure.caption.33}%
+\contentsline {figure}{\numberline {{\GaramondCaption 6.3}}{\ignorespaces Ablation study on the Santa Fe laser data set.}}{43}{figure.caption.34}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {{\GaramondCaption A.1}}{\ignorespaces Sample images from the USPS Handrwitten Digits dataset.}}{47}{figure.caption.36}%
+\contentsline {figure}{\numberline {{\GaramondCaption A.2}}{\ignorespaces Sample images from the MNIST dataset.}}{48}{figure.caption.37}%
+\contentsline {figure}{\numberline {{\GaramondCaption A.3}}{\ignorespaces Sample images from the Quickdraw dataset.}}{48}{figure.caption.38}%
+\contentsline {figure}{\numberline {{\GaramondCaption A.4}}{\ignorespaces Sample images from the Color Boxes dataset.}}{49}{figure.caption.39}%

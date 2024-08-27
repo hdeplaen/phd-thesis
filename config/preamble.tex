@@ -1,15 +1,75 @@
+% GENERAL
+\usepackage{luacode}
+
+% TYPOGRAPHY
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+
+\renewcommand{\baselinestretch}{1.1} 
+
+\newcommand{\eg}{\emph{e.\,g.}}
+\newcommand{\ie}{\emph{i.\,e.}}
+
+\def\imagetop#1{\vtop{\null\hbox{#1}}} % aligns images to top in tabular
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% BIBLIOGRAPHY
 \usepackage{csquotes}
-\usepackage[style=ieee,hyperref=auto,mincrossrefs=999,backend=biber]{biblatex}
+\usepackage[%
+style=ieee-alphabetic,%
+hyperref=auto,%
+mincrossrefs=999,%
+backend=biber, %
+doi=false, %
+url=false, %
+isbn=false, %
+eprint=false%
+]{biblatex}
 \addbibresource{bibliography.bib}
 
 % MATH
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{mathrsfs}
+\usepackage{algorithmic}
+\usepackage{fixmath}
+\usepackage{xfrac}
+\usepackage{nicefrac}
+\usepackage{stmaryrd}
+\usepackage{mathtools}
+\usepackage{empheq}
+% \usepackage{breqn}
+
+% PROOFS
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\renewcommand{\qedsymbol}{$\blacksquare$}
 
 % MISC
 \usepackage{lipsum}
+\usepackage{printlen}
+\usepackage{import}
+
+%% TIKZ
+% \usepackage{tikz}
+% \usetikzlibrary{shapes, calc, shapes, arrows, positioning}
+% \usetikzlibrary{backgrounds,automata}
+
+% \tikzstyle{neuron}=[draw,circle,minimum size=17pt,inner sep=0pt, fill=white]
+% \tikzstyle{stateTransition}=[thick]
+% \tikzstyle{learned}=[text=red]
+% \tikzstyle{box}=[draw, fill=black!30, rounded corners]
 
 % INPUTS
 \input{config/fonts.tex}
 \input{config/chapters.tex}
+\input{config/commands.tex}

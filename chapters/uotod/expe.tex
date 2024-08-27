@@ -1,0 +1,137 @@
+\section{Experimental Results \& Discussion}
+
+We show that matching based on \textit{Unbalanced Optimal Transport} generalizes many different matching strategies and performs on par with methods that use either \textit{Bipartite Matching} or anchor boxes along with matching each prediction to the closest ground truth box with a threshold. We then analyze the influence of constraint parameter $\tau_2$ by training SSD with and without NMS for multiple parameter values. Finally, we show that OT with entropic regularization both improves the convergence and is faster to compute than the Hungarian algorithm in case of many matches.
+
+\begin{figure}
+    \centering
+    \def\svgwidth{0.8\textwidth}\small
+    \graphicspath{{chapters/uotod/image/}}
+    \import{chapters/uotod/image}{AP_DETR_color-H_balanced.pdf_tex}
+    \caption{Convergence curves for DETR on the Color Boxes dataset. The model converges faster with a regularized matching.}
+    \label{fig:DETRmAPtoy}
+\end{figure}
+
+\subsection{Setup}
+\subsubsection{Datasets} We perform experiments on a synthetic object detection dataset with 4.800 training and 960 validation images and on the large-scale COCO \cite{lin2014microsoft} dataset with 118,287 training and 5,000 validation test images. We report on mean Average Precision (AP) and mean Average Recall (AR). The two metrics are an average of the per-class metrics following COCO's official evaluation procedure. For the Color Boxes synthetic dataset, we uniformly randomly draw between 0 and 30 rectangles of 20 different colors from each image. Appendix \ref{app:color_boxes_dataset} provides the detailed generation procedure and sample images.
+
+% The COCO dataset \cite{lin2014microsoft} has $118,287$ train and $5,000$ validation images. Objects from $80$ categories are annotated, with an average of $\sim 7.27$ objects and at most $92$ objects per image.
+
+\subsubsection{Training} For a fair comparison, the classification and localization costs for matching and training are identical to the ones used by the models. Unless stated otherwise, we train the models with their default hyper-parameter sets.  DETR and Deformable DETR are trained with hyper-parameters $\lambda_{\text{prob}}=\lambda_{\mathrm{CE}}=2$,  $\lambda_{\ell^1} = 5$ and $\lambda_{\mathrm{GIoU}}=2$. For Deformable DETR, we found the classification cost to be overwhelmed by the localization costs in the regularized minimization problem (Definition \ref{def:rOT}). We therefore set $\lambda_{\text{prob}} = 5$. We, however keep $\lambda_{\mathrm{CE}} = 2$ so that the final loss value for a given matching remains unchanged. SSD is trained with original hyper-parameters $\lambda_{\mathrm{CE}}=\lambda_{\text{smooth }\ell^1} =1$.
+For OT, we set the entropic regularization to $\epsilon = \epsilon_0/(\log{(2N_p)} + 1)$ where $\epsilon_0=0.12$ for all models (App.~\ref{app:params}). In the following experiments, the Unbalanced OT is solved with multiple values of $\tau_2$ whereas $\tau_1$ is fixed to a large value $\tau_1=100$ to simulate a hard constraint. In practice, we limit the number of iterations of the scaling algorithm. This provides a good enough approximation~\cite{ge2021yolox}.
+
+\begin{table} 
+    \centering \small
+    \begin{tabular}{lllllll}
+        \toprule
+        &\textbf{Model} & \textbf{Matching} & $\mathbfit{\tau_2}$ &\textbf{Epochs} & \textbf{AP} & \textbf{AR}  \\
+        \midrule
+        \multirow{6}{*}{\hspace{-.4em}\begin{sideways}Color Boxes\end{sideways}} & DETR        & Hungarian  & ($\infty$)   & 300   & \textbf{50.9}  & \textbf{65.7} \\
+        &DETR        &   Hungarian & ($\infty$) &150   & 45.3  & 60.7 \\
+        &DETR        & OT          & ($\infty$) & \textbf{150}   & 50.3  & \textbf{65.7}  \\ 
+        \cmidrule(lr){2-7}
+        &D. DETR   & Hungarian    &($\infty$)& 50    & \textbf{64.0}  & 75.9 \\
+        &D. DETR   & OT           &($\infty$)& 50    & 63.5  & \textbf{76.5} \\ 
+        \midrule
+        \multirow{4.5}{*}{\hspace{-.4em}\begin{sideways}COCO\end{sideways}}&D. DETR  &Hungarian & ($\infty$)& 50            & \textbf{44.5}  & \textbf{63.0} \\
+        &D. DETR   & OT       &($\infty$)& 50            & 44.2  & 62.0 \\ 
+        \cmidrule(lr){2-7}
+        &SSD300         & Two Stage & ---- & 120            & \textbf{24.9}  & \textbf{36.8} \\
+        &SSD300         & Unb. OT  & $0.01$ & 120            & 24.7    & 36.4 \\
+        %\midrule
+        %SSD         & Min.+Thrs.       & ---   & 120    & 51.6    & 67.0 \\
+        %SSD         & Unb. OT      & 0.01  & 120    & 51.1    & 66.3 \\
+        %SSD         & OT           & ---   & 120    & 48.1    & 64.3 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Object detection metrics for different models and loss functions on the Color Boxes and COCO datasets.}
+    \label{tab:metrics_stats}
+\end{table}
+
+% \begin{table}[] 
+%     \centering \small
+%     \begin{tabular}{lllll}
+%         \toprule
+%         \textbf{Model} & \textbf{Matching} & \textbf{Epochs} & \textbf{AP} & \textbf{AR}  \\
+%         \midrule
+%         Def.-DETR   & Hungarian & 50            & 44.5  & 63.0 \\
+%         Def.-DETR   & OT       & 50            & 44.2  & 62.0 \\ 
+%         \midrule
+%         SSD         & Min.+Thrs.& 120            & 24.9  & 36.8 \\
+%         SSD         & Unb. OT  & 120            & ..    & .. \\
+%         \bottomrule
+%     \end{tabular}
+%     \caption{Object detection metrics for different models and loss functions on the COCO dataset. We show that Unbalanced Optimal Transport is a good candidate as unifying matching problem for object detection loss functions}
+%     \label{tab:coco_metrics_stats}
+% \end{table}
+
+\subsection{Timing Analysis for SSD}
+
+As can be seen in Table~\ref{tab:ssd_timings}, OT-based matches improve the epoch time (forward pass, compute the match cost, matching algorithm, and backward pass; in blue) for SSD with the Hungarian algorithm by almost 50\%. The difference is smaller for DETR and variants as the models are proportionally heavier and the number of predictions smaller. 
+\begin{table}[h!]
+    \small
+    \centering
+    \begin{tabular}{l | rrrr}
+    \toprule
+        \textbf{Epoch step}         & \textbf{OT} & \textbf{Unb. OT} & \textbf{Hung.} & \textbf{2-step} \\ \midrule
+        Preprocessing & 6.3 ms & \textit{idem} & \textit{idem} & \textit{idem} \\
+        \rowcolor{blue!10} Forward pass    & 5.8 ms & \textit{idem} & \textit{idem} & \textit{idem} \\
+        Anchor gen. & 54.2 ms & \textit{idem} & \textit{idem} & \textit{idem} \\
+        \rowcolor{blue!10}Match cost & 4.2 ms & \textit{idem} & \textit{idem} & \textit{idem} \\
+        \rowcolor{blue!20}Matching        & 1.1 ms & 1.5 ms & 18.3 ms & 2.3 ms \\
+        \rowcolor{blue!10}Backward pass   & 8.2 ms & \textit{idem} & \textit{idem} & \textit{idem} \\
+        Final losses  & 11.6 ms & 11.6 ms & 9.7 ms & 9.7 ms \\ 
+        \bottomrule
+        \end{tabular}
+    \caption{Timing for each step in SSD300 on Color Boxes and a batch size of 16, computed with an Nvidia TITAN X GPU and Intel Core i7-4770K CPU @ 3.50GHz. Likewise the models we built upon, we used \textit{Torchvision's} anchor generation implementation, which extensively relies on heavy loops and could drastically be improved (not the focus of our work). The final losses timings are partially due to the expensive hard-negative mining.} %  and is technically not necessary for the training
+    \label{tab:ssd_timings}
+\end{table}
+
+\subsection{Unified Matching Strategy}
+\subsubsection{DETR and Deformable DETR} Convergence curves for DETR on the Color Boxes dataset are shown in Fig.~\ref{fig:DETRmAPtoy} and associated metrics are presented in Table~\ref{tab:metrics_stats}. DETR converges in half the number of epochs with the regularized balanced OT formulation. This confirms that one reason for slow DETR convergence is the discrete nature of BM, which is unstable, especially in the early stages of training. Training the model for more epochs with either BM or OT does not improve metrics as the model starts to overfit. Appendix \ref{app:qualitative_results_and_discussion} provides qualitative examples and a more detailed convergence analysis. 
+We evaluate how these results translate to faster converging DETR-like models by additionally training Deformable DETR~\cite{zhu2020deformabledetr}.
+% Unlike DETR, Deformable DETR uses feature maps from multiple backbone scales and replaces attention modules \cite{vaswani2017attention} with deformable attention modules, which only attend to a small set of key sampling points. 
+In addition to model improvements, Deformable DETR makes three times more predictions than DETR and uses a sigmoid focal loss~\cite{lin2017focalloss} instead of a softmax cross-entropy loss for both classification costs.
+Table~\ref{tab:metrics_stats} gives results on Color Boxes and COCO. We observe that the entropy term does not lead to faster convergence. Indeed, Deformable DETR converges in $50$ epochs with both matching strategies. Nevertheless, both OT and bipartite matching lead to similar AP and AR. 
+
+\begin{table}
+    \centering \small
+    \begin{tabular}{llllll}
+        \toprule
+        \multirow{2}{*}{\textbf{Matching}}& \multirow{2}{*}{\textbf{$\mathbfit{\tau_2}$}} & \multicolumn{2}{c}{\textbf{with NMS}} & \multicolumn{2}{c}{\textbf{w/o NMS}} \\ \cmidrule(lr){3-4} \cmidrule(lr){5-6}
+         &  & \textbf{AP} & \textbf{AR} & \textbf{AP} & \textbf{AR} \\ 
+        \midrule
+        Two Stage & ----    & \textbf{51.6} & \textbf{67.0} & 23.2 & \textbf{77.8} \\ \midrule
+        Unb. OT & 0.01  & 51.1 & 66.3  & 25.3  & 76.5  \\ 
+        Unb. OT & 0.1   & 50.9 & 66.8  & 35.9  & 75.4  \\
+        % Unb. OT & 0.5   & 49.8 & 65.1  & 44.1  & 73.9  \\
+        Unb. OT & 1     & 48.3 & 64.4  & 44.3  & 73.4   \\
+        Unb. OT & 10    & 48.0 & 64.1  & 44.9  & 72.9   \\ \midrule
+        OT      & ($\infty$)   & 48.1 & 64.3  & \textbf{45.2} & 73.0  \\
+        \bottomrule
+    \end{tabular}
+    \caption{Comparison of matching strategies on the Color Boxes dataset. SSD300 is evaluated both with and without NMS.}
+    \label{tab:removal_of_nms_ssd}
+\end{table}
+
+\subsubsection{SSD and the Constraint Parameter} 
+%We now empirically verify Proposition \ref{prop:threshold} by training SSD. The first two rows of Table \ref{tab:removal_of_nms_ssd} show the performance for the original matching strategy and for the OT matching with a small $\tau_2$.   % opens the door to new matching strategies
+To better understand how unbalanced OT bridges the gap between DETR's and SSD's matching strategies, we analyze the variation in performance of SSD for different values of $\tau_2$. %Intuitively, $\tau_2$ controls how variations in the ground truth masses are penalized. 
+Results for an initial learning rate of 0.0005 are displayed in Table \ref{tab:removal_of_nms_ssd}. 
+%
+In the second row, the parameter value is close to zero. From Proposition \ref{prop:threshold} and when $\epsilon \to 0$, each prediction is matched to the closest ground truth box unless the matching cost exceeds 0.5. Thus, multiple predictions are matched to each ground truth box, and NMS is needed to eliminate near duplicates. When NMS is removed, AP drops by 25.8 points and AR increases by 10.2 points. 
+We observe similar results for the original SSD matching strategy (1\textsuperscript{st} row), which suggests matching each ground truth box to the closest anchor box does not play a huge role in the two-stage matching procedure from SSD. The lower part of Table \ref{tab:metrics_stats} shows the same for COCO. When $\tau_2 \to +\infty$, one recovers the balanced formulation used in DETR (last row). Removing NMS leads to a 2.9 points drop for AP and a 9.7 points increase for AR. Depending on the field of application, it may be preferable to apply a matching strategy with a low $\tau_2$ and with NMS when precision is more important or without NMS when the recall is more important. Moreover, varying parameter $\tau_2$ offers more control on the matching strategy and therefore on the precision-recall trade-off \cite{buckland1994precisionrecall}.
+
+\begin{figure}
+    \centering
+    \def\svgwidth{.8\textwidth}\footnotesize
+    \graphicspath{{chapters/uotod/image/}}
+    \import{chapters/uotod/image}{sinkhorn_timing.pdf_tex}
+    %\import{chapters/uotod/image}{sinkhorn_timing.pdf}
+    \vspace{-0.8em}
+    \caption{Average and standard deviation of the computation time for different matching strategies on COCO with batch size $16$. The Hungarian algorithm is computed with \textit{SciPy} and its time includes the transfer of the cost matrix from GPU memory to RAM. We run $20$ Sinkhorn iterations. Computed with an Nvidia TITAN X GPU and Intel Core i7-4770K CPU @ 3.50GHz.}
+    \label{fig:avg_matching_time}
+\end{figure}
+
+\subsubsection{Computation Time}
+%The Hungarian algorithm is on average $2.6 ms$ faster than the Balanced Sinkhorn algorithm for DETR, which makes only $100$ predictions. 
+For a relatively small number of predictions, implementations of Sinkhorn perform on par with the Hungarian algorithm~(Fig. \ref{fig:avg_matching_time}). The ``balanced'' algorithm is on average 2.6ms slower than the Hungarian algorithm for $100$ predictions (DETR) and 1.5ms faster for 300 predictions (Deformable DETR). For more predictions, GPU parallelization of the Sinkhorn algorithm makes a large difference (more than 50x speedup). As a reference point, SSD300 and SSD512 make $8,732$ and $24,564$ predictions.

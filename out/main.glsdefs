@@ -1,14 +1,294 @@
-\glsdefs@newdocentry{md}%
+\glsdefs@newdocentry{mse}%
 {%
-name={MD},%
-sort={MD},%
+name={MSE},%
+sort={MSE},%
 type={main},%
-first={MD},%
-firstplural={MDs},%
-text={MD},%
-plural={MDs},%
-description={molecular dynamics},%
-descriptionplural={molecular dynamics},%
+first={MSE},%
+firstplural={MSEs},%
+text={MSE},%
+plural={MSEs},%
+description={Mean Square Error},%
+descriptionplural={Mean Square Error},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{pca}%
+{%
+name={PCA},%
+sort={PCA},%
+type={main},%
+first={PCA},%
+firstplural={PCAs},%
+text={PCA},%
+plural={PCAs},%
+description={Principal Component Analysis},%
+descriptionplural={Principal Component Analysis},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{kpca}%
+{%
+name={KPCA},%
+sort={KPCA},%
+type={main},%
+first={KPCA},%
+firstplural={KPCAs},%
+text={KPCA},%
+plural={KPCAs},%
+description={Kernel Principal Component Analysis},%
+descriptionplural={Kernel Principal Component Analysis},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{rkm}%
+{%
+name={RKM},%
+sort={RKM},%
+type={main},%
+first={RKM},%
+firstplural={RKMs},%
+text={RKM},%
+plural={RKMs},%
+description={Restricted Kernel Machines},%
+descriptionplural={Restricted Kernel Machines},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{iou}%
+{%
+name={IoU},%
+sort={IoU},%
+type={main},%
+first={IoU},%
+firstplural={IoUs},%
+text={IoU},%
+plural={IoUs},%
+description={Intersection over Union},%
+descriptionplural={Intersection over Union},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{giou}%
+{%
+name={GIoU},%
+sort={GIoU},%
+type={main},%
+first={GIoU},%
+firstplural={GIoUs},%
+text={GIoU},%
+plural={GIoUs},%
+description={Generalized Intersection over Union},%
+descriptionplural={Generalized Intersection over Union},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ce}%
+{%
+name={CE},%
+sort={CE},%
+type={main},%
+first={CE},%
+firstplural={CEs},%
+text={CE},%
+plural={CEs},%
+description={Cross Entropy},%
+descriptionplural={Cross Entropy},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ar}%
+{%
+name={AR},%
+sort={AR},%
+type={main},%
+first={AR},%
+firstplural={ARs},%
+text={AR},%
+plural={ARs},%
+description={Average Recall},%
+descriptionplural={Average Recall},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ap}%
+{%
+name={AP},%
+sort={AP},%
+type={main},%
+first={AP},%
+firstplural={APs},%
+text={AP},%
+plural={APs},%
+description={Average Precision},%
+descriptionplural={Average Precision},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ot}%
+{%
+name={OT},%
+sort={OT},%
+type={main},%
+first={OT},%
+firstplural={OTs},%
+text={OT},%
+plural={OTs},%
+description={Optimal Transport},%
+descriptionplural={Optimal Transport},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{uot}%
+{%
+name={Unbalanced OT},%
+sort={Unbalanced OT},%
+type={main},%
+first={Unbalanced OT},%
+firstplural={Unbalanced OTs},%
+text={Unbalanced OT},%
+plural={Unbalanced OTs},%
+description={Unbalanced Optimal Transport},%
+descriptionplural={Unbalanced Optimal Transport},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%

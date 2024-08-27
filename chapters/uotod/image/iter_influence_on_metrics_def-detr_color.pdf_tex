@@ -1,0 +1,91 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'iter_influence_on_metrics_def-detr_color.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{388.79998779bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.5925926)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.15383697,0.07037441){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.19330101,0.07037441){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.24263102,0.07037441){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}10\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.3412911,0.07037441){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}20\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.43995114,0.07037441){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}30\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.53861122,0.07037441){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}40\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.63727129,0.07037441){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.93325145,0.07037441){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}80\end{tabular}}}}%
+    \put(0.54354423,0.03519403){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Number of iterations\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.09686214,0.11891804){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}60\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.09686214,0.20198951){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}64\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.09686214,0.28506094){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}68\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.09686214,0.3681324){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}72\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.09686214,0.45120385){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}76\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.09686214,0.53427531){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}80\end{tabular}}}}%
+    \put(0.04849618,0.33636833){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Metric\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.90208851,0.34932526){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}AP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{iter_influence_on_metrics_def-detr_color.pdf}}%
+    \put(0.90208851,0.30779765){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}AR\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

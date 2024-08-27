@@ -1,7 +1,7 @@
-\documentclass[faculty=firw,department=elt,phddegree=elt,doctoralschool=ads]{adsphd}
+\documentclass[final,faculty=firw,department=elt,phddegree=elt,doctoralschool=ads]{adsphd}
 \input{config/preamble.tex}
 
-% !!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!                                                               !!
 % !!  WARNING: do not remove the following lines between           !!
 % !!  "%%% COVER: Settings %%%" and "%%% COVER: End settings %%%"  !!
@@ -9,8 +9,7 @@
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 %%% COVER: Settings %%%
-\title{Kernels, Duality and Optimal Transport}
-%\subtitle{Multiscale computing for Dummies}
+\title{On Kernels, Duality and Optimal Transport}
 
 \author{Henri}{De Plaen}
 
@@ -21,11 +20,13 @@
 \jurymember{Prof.~dr.~Tinne~Tuytelaars}{}
 \externaljurymember{Prof.~dr.~M.~Cuturi}{Apple, ENSAE Paris}
 
+
 % Your research group within the department
 % e.g. iMinds-DistriNet, Scientific Computing Group, ...
-\researchgroup{ESAT-STADIUS}
-\website{} % Leave empty to hide
-\email{henri.deplaen@esat.kuleuven.be} % Leave empty to hide
+\researchgroup{STADIUS Center for Dynamical Systems, Signal Processing and Data Analytics}
+\website{https://www.esat.kuleuven.be/stadius/} % Leave empty to hide
+% \email{henri.deplaen@esat.kuleuven.be} % Leave empty to hide
+\email{}
 
 \address{Kasteelpark Arenberg 10 box 2446}
 \addresscity{B-3001 Leuven} % This is the default value. Note
@@ -44,9 +45,6 @@
 %% Set bleeds
 %\setlength{\defaultlbleed}{7mm}
 %\setlength{\defaultrbleed}{7mm}
-
-% Set custom cover page
-% \setcustomcoverpage{mycoverpage.tex} % mycoverpage.tex is the default
 
 %%% COVER: End settings %%%
 
@@ -73,43 +71,30 @@
 }
 \makeglossaries%
 
-% Fonts
-\usepackage{textcomp} % nice greek alphabet
-\usepackage{pifont}   % Dingbats
-\usepackage{booktabs}
-\usepackage{amssymb,amsthm}
-\usepackage{amsmath}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\linespread{1}
 
 \makefrontcoverXII
-
 \maketitle
 
 \frontmatter % to get \pagenumbering{roman}
+
+\linespread{1.1}
+\setlength\parindent{24pt}
 
 \includepreface{preface}
 \includeabstract{abstract}
 \includeabstractnl{abstractnl}
 
-% To create a list of abbreviations, there are 2 options
-% 1. manual creation of list of abbreviations and inclusion as a chapter
-%    \includeabbreviations{abbreviations}
-% 2. automatic generation via the glossary package
-%    \glossary{name=MD,description=molecular dynamics}
+
 \input{config/abbreviations.tex}
 \myprintglossary
 
-% To create a list of symbols, there are 2 options
-% 1. include a manually created nomenclature as a chapter
-%    \includenomenclature{nomenclaturechapter}
-% 2. automatic generation via the nomencl package
-%    \nomenclature[cB]{$c_B(\vec{x})$}{Characteristic function of $B$}
+
+\input{config/symbols.tex}
 \myprintnomenclature
 
 \tableofcontents
@@ -120,16 +105,13 @@
 
 \mainmatter % to get \pagenumbering{arabic}
 
-% Show instructions on a separate page
-\instructionschapters\cleardoublepage
-
 \includechapter{introduction}
-\includechapter{manual} % Remove this chapter
 
-% Insert here your own chapters
-% Chapters are expected to be in a tex-file with the given name dot
-% tex and in a directory with the given name in the chapters
-% directory.
+\includechapter{kernels}
+\includechapter{ot}
+\includechapter{wasskernels}
+\includechapter{uotod}
+\includechapter{timeseries}
 
 \includechapter{conclusion}
 
@@ -137,7 +119,7 @@
 
 \appendix
 
-\includeappendix{myappendix}
+\includeappendix{datasets}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
@@ -145,9 +127,12 @@
 % BibLatex (comment lines above and comment out biblatex lines in preamble)
 \printbibliography[title=\bibname]
 
-\includecv{curriculum}
+% \includecv{curriculum}
 
 \includepublications{publications}
+
+\linespread{1}
+\setlength\parindent{0pt}
 
 \makebackcoverXII
 

@@ -1,0 +1,11 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{$\cdot^\top$}]\begingroup Transpose operator\nomeqref {0}\nompageref{vii}
+  \item [{$\mathbfit{I}_N$}]\begingroup Identity matrix of size $N \times N$.\nomeqref {0}\nompageref{vii}
+  \item [{$\mathbfit{M}$}]\begingroup A matrix, assumed to lie in a space $\mathbb{R}^{N \times M}$.\nomeqref {0}\nompageref{vii}
+  \item [{$\mathbfit{v}$}]\begingroup A vector, assumed to lie in a space $\mathbb{R}^N$.\nomeqref {0}\nompageref{vii}
+  \item [{$a$}]\begingroup A scalar, assumed to lie in $\mathbb{R}$.\nomeqref {0}\nompageref{vii}
+  \item [{$N$}]\begingroup A number, assumed to lie in $\mathbb{N}$.\nomeqref {0}\nompageref{vii}
+
+\end{thenomenclature}

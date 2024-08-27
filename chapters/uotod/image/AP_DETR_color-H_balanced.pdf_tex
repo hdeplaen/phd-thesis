@@ -1,0 +1,93 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'AP_DETR_color-H_balanced.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{360bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.56000002)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.12405556,0.07600437){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.2602361,0.07600437){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.39641669,0.07600437){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.53259722,0.07600437){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}150\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.66877776,0.07600437){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}200\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.80495834,0.07600437){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}250\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.94113888,0.07600437){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}300\end{tabular}}}}%
+    \put(0.54621527,0.03800956){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Epoch\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.10461111,0.10600217){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.10461111,0.18256599){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}10\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.10461111,0.25912976){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}20\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.10461111,0.33569355){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}30\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.10461111,0.41225733){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}40\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.10461111,0.48882111){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}50\end{tabular}}}}%
+    \put(0.05237587,0.32327779){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AP\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.34761711,0.20050175){\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}Hungarian\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{AP_DETR_color-H_balanced.pdf}}%
+    \put(0.34761711,0.15972916){\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}OT\end{tabular}}}}%
+    \put(0.58842977,0.38651515){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hungarian with finetuning\\at epoch 200\end{tabular}}}}%
+    \put(0.58592072,0.17843725){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hungarian with finetuning\\at epoch 100\end{tabular}}}}%
+    \put(0.61174711,0.28095101){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OT with finetuning\\at epoch 100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{AP_DETR_color-H_balanced.pdf}}%
+  \end{picture}%
+\endgroup%

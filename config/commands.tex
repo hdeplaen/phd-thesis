@@ -1,0 +1,27 @@
+\newcommand\eqincludegraphics[2][]{\vcenter{\hbox{\includegraphics[#1]{#2}}}}
+
+
+%% MATH OPERATORS
+
+% matho operators
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{Tr}
+\DeclareMathOperator{\pl}{PL}
+\DeclareMathOperator{\fro}{F}
+\DeclareMathOperator{\argmin}{arg\,min}
+
+% kl
+\DeclarePairedDelimiterX{\klx}[2]{(}{)}{%
+  #1\,\delimsize\|\,#2%
+}
+\newcommand{\kl}{\mathrm{KL}\klx}
+
+% defeq
+\newcommand\defeq{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny def}}}{=}}}
+
+% norm
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% brace
+\newcommand{\xoverbrace}[2][\vphantom{\sum_i^P}]{\overbrace{#1#2}}

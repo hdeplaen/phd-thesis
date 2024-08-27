@@ -1,0 +1,7 @@
+This is makeindex, version 2.16 [MiKTeX 24.4].
+Scanning style file ./out/main.ist...........................done (27 attributes redefined, 0 ignored).
+Scanning input file out/main.glo....done (11 entries accepted, 0 rejected).
+Sorting entries....done (48 comparisons).
+Generating output file out/main.gls....done (14 lines written, 0 warnings).
+Output written in out/main.gls.
+Transcript written in out/main.glg.

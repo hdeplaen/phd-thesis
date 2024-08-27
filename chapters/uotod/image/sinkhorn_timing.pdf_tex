@@ -1,0 +1,88 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'sinkhorn_timing.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{331.20001221bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.67391301)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{sinkhorn_timing.pdf}}%
+    \put(0.20502406,0.08261338){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{sinkhorn_timing.pdf}}%
+    \put(0.3694218,0.08261338){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}300\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{sinkhorn_timing.pdf}}%
+    \put(0.54958582,0.08261338){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{sinkhorn_timing.pdf}}%
+    \put(0.87385766,0.08261338){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}8732\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{sinkhorn_timing.pdf}}%
+    \put(0.56805605,0.04131473){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Number of predictions\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{sinkhorn_timing.pdf}}%
+    \put(0.07663148,0.20593505){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\textsuperscript{-3}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{sinkhorn_timing.pdf}}%
+    \put(0.07663148,0.37828187){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\textsuperscript{-2}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{sinkhorn_timing.pdf}}%
+    \put(0.05827493,0.34021736){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Time [s]\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{sinkhorn_timing.pdf}}%
+    \put(0.28043583,0.50362788){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Scaling alg. for OT (Sinkhorn)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{sinkhorn_timing.pdf}}%
+    \put(0.28043583,0.45930987){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Scaling alg. for Unb. OT\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{sinkhorn_timing.pdf}}%
+    \put(0.28043583,0.41499187){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hungarian alg.\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{sinkhorn_timing.pdf}}%
+    \put(0.20502406,0.58115845){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}DETR\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{sinkhorn_timing.pdf}}%
+    \put(0.3694218,0.58115845){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Def. DETR\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{sinkhorn_timing.pdf}}%
+    \put(0.87385766,0.58115845){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}SSD\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{sinkhorn_timing.pdf}}%
+    \put(0.56805605,0.61617788){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Model\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{sinkhorn_timing.pdf}}%
+  \end{picture}%
+\endgroup%

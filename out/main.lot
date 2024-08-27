@@ -4,12 +4,18 @@
 \babel@toc {dutch}{}\relax 
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
 \babel@toc {dutch}{}\relax 
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {{\GaramondCaption 4.1}}{\ignorespaces Classification error comparison on multiple datasets.}}{14}{table.caption.18}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {{\GaramondCaption 5.1}}{\ignorespaces Object detection metrics for different models and loss functions on the Color Boxes and COCO datasets.}}{34}{table.caption.26}%
+\contentsline {table}{\numberline {{\GaramondCaption 5.2}}{\ignorespaces Timing for each step in SSD300 on Color Boxes and a batch size of 16, computed with an Nvidia TITAN X GPU and Intel Core i7-4770K CPU @ 3.50GHz. Likewise the models we built upon, we used \textit {Torchvision's} anchor generation implementation, which extensively relies on heavy loops and could drastically be improved (not the focus of our work). The final losses timings are partially due to the expensive hard-negative mining.}}{35}{table.caption.27}%
+\contentsline {table}{\numberline {{\GaramondCaption 5.3}}{\ignorespaces Comparison of matching strategies on the Color Boxes dataset. SSD300 is evaluated both with and without NMS.}}{35}{table.caption.28}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {{\GaramondCaption 6.1}}{\ignorespaces Mean squared error on the forecasted data. Standard deviation for 10 iterations between brackets for the stochastic models.}}{43}{table.caption.35}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
